@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'JKWKWebViewHandler_Example' do
+  pod 'JKWKWebViewHandler', :path => '../'
+
+  target 'JKWKWebViewHandler_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
