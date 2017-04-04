@@ -1,0 +1,16 @@
+PODS:
+  - JKWKWebViewHandler (0.1.0)
+
+DEPENDENCIES:
+  - JKWKWebViewHandler (from `../`)
+
+EXTERNAL SOURCES:
+  JKWKWebViewHandler:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JKWKWebViewHandler: 18663c8cb028da84514b1fcfb2512c5bc20c2b9e
+
+PODFILE CHECKSUM: f3046853509cf550cdfee8147c8c991078d478b6
+
+COCOAPODS: 1.1.1

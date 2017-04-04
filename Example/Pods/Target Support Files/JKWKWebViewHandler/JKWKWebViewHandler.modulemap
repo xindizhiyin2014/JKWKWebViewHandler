@@ -1,0 +1,6 @@
+framework module JKWKWebViewHandler {
+  umbrella header "JKWKWebViewHandler-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'JKWKWebViewHandler'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of JKWKWebViewHandler.'
+  s.summary          = 'This is a tool of WKWebivew interact with H5, it add a callback event of every JS funtion if needed. and when the ViewController will be destroyed all the callback events can be cleaned. it is different to the way create a new iframe and catch the url to interact with H5.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,20 +18,21 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+TODO: This is a tool of WKWebivew interact with H5, it add a callback event of every JS funtion if needed. and when the ViewController will be destroyed all the callback events can be cleaned. it is different to the way create a new iframe and catch the url to interact with H5.
                        DESC
 
-  s.homepage         = 'https://github.com/HHL110120/JKWKWebViewHandler'
+  s.homepage         = 'https://github.com/xindizhiyin2014/JKWKWebViewHandler'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'HHL110120' => '929097264@qq.com' }
-  s.source           = { :git => 'https://github.com/HHL110120/JKWKWebViewHandler.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/xindizhiyin2014/JKWKWebViewHandler.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'JKWKWebViewHandler/Classes/**/*'
-  
+
+ s.source_files = 'JKWKWebViewHandler/Classes/**/*.{h,m}'
+ s.resources = 'JKWKWebViewHandler/Resources/*.js'
   # s.resource_bundles = {
   #   'JKWKWebViewHandler' => ['JKWKWebViewHandler/Assets/*.png']
   # }

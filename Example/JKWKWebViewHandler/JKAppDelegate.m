@@ -7,12 +7,20 @@
 //
 
 #import "JKAppDelegate.h"
-
+#import  "JKWKWebViewHandler.h"
+#import "JKWKWebViewController.h"
 @implementation JKAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    JKWKWebViewController *jkVC = [JKWKWebViewController new];
+    NSString *url = [NSString stringWithFormat:@"file://%@",[[NSBundle mainBundle] pathForResource:@"test" ofType:@"html"]];
+    jkVC.url = url;
+    NSLog(@"url :%@",url);
+    UINavigationController *naVC = [[UINavigationController alloc] initWithRootViewController:jkVC];
+    self.window.rootViewController = naVC;
     return YES;
 }
 
