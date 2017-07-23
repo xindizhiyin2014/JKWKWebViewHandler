@@ -68,7 +68,7 @@
 		A7F75EBC6C71EFE541D70BD9 /* Pods_JKWKWebViewHandler_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKWKWebViewHandler_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC3EAD3C5E694B11BC872BC /* Pods-JKWKWebViewHandler_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKWKWebViewHandler_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JKWKWebViewHandler_Example/Pods-JKWKWebViewHandler_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F00AD6100FDA136DC71599DD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		F1CC3A2EF9C661999B0437CF /* JKWKWebViewHandler.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JKWKWebViewHandler.podspec; path = ../JKWKWebViewHandler.podspec; sourceTree = "<group>"; };
+		F1CC3A2EF9C661999B0437CF /* JKWKWebViewHandler.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JKWKWebViewHandler.podspec; path = ../JKWKWebViewHandler.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

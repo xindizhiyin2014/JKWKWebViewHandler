@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JKWKWebViewHandler'
-  s.version          = '0.1.0'
-  s.summary          = 'This is a tool of WKWebivew interact with H5, it add a callback event of every JS funtion if needed. and when the ViewController will be destroyed all the callback events can be cleaned. it is different to the way create a new iframe and catch the url to interact with H5.'
+  s.version          = '0.1.1'
+  s.summary          = 'This is a tool of WKWebivew interact with H5.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

@@ -46,8 +46,10 @@ static JKEventHandler * _handler= nil;
 - (void)userContentController:(WKUserContentController *)userContentController
       didReceiveScriptMessage:(WKScriptMessage *)message {
    // NSLog(@"message :%@",message.body);
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored"-Wincompatible-pointer-types-discards-qualifiers"
     if ([message.name isEqualToString:EventHandler]) {
-        
+   #pragma clang diagnostic pop
         NSString *methodName = message.body[@"methodName"];
         NSDictionary *params = message.body[@"params"];
         NSString *callBackName = message.body[@"callBackName"];

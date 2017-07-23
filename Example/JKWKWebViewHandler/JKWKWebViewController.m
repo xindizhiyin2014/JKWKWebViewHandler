@@ -11,7 +11,7 @@
 #import "JKEventHandler.h"
 #import "JKEventHandler+Demo.h"
 
-@interface JKWKWebViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate>
+@interface JKWKWebViewController ()<WKNavigationDelegate, WKUIDelegate>
 
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) UIProgressView *progressView;
