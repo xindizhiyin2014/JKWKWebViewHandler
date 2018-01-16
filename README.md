@@ -24,6 +24,11 @@ pod "JKWKWebViewHandler"
 
 HHL110120, 929097264@qq.com
 
+## QQ Contact group
+
+if you use QQ you can use this Qrcode to contact with us
+![](https://github.com/xindizhiyin2014/JKWKWebViewHandler/blob/master/JKWebViewhandler.png?raw=true)
+
 ## License
 
 JKWKWebViewHandler is available under the MIT license. See the LICENSE file for more info.
