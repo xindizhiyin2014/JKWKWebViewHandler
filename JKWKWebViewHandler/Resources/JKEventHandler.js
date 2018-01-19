@@ -1,20 +1,17 @@
 var JKEventHandler ={
     
-callNativeFunction:function(functionString,params,callBack){
-    
-    var methodName = (functionString.replace(/function\s?/mi,"").split("("))[0];
-    var callBackName =methodName + 'CallBack';
+callNativeFunction:function(nativeMethodName,params,callBackID,callBack){
     var message;
     
     if(!callBack){
         
-        message = {'methodName':methodName,'params':params};
+        message = {'methodName':nativeMethodName,'params':params};
         window.webkit.messageHandlers.JKEventHandler.postMessage(message);
         
     }else{
-        message = {'methodName':methodName,'params':params,'callBackName':callBackName};
-        if(!Event._listeners[callBackName]){
-        Event.addEvent(callBackName, function(data){
+        message = {'methodName':nativeMethodName,'params':params,'callBackID':callBackID};
+        if(!Event._listeners[callBackID]){
+        Event.addEvent(callBackID, function(data){
                        
                        callBack(data);
                        
@@ -26,9 +23,9 @@ callNativeFunction:function(functionString,params,callBack){
     
 },
     
-callBack:function(callBackName,data){
+callBack:function(callBackID,data){
     
-    Event.fireEvent(callBackName,data);
+    Event.fireEvent(callBackID,data);
     
 },
     

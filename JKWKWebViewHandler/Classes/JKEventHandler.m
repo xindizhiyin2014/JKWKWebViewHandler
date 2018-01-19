@@ -52,7 +52,7 @@ static JKEventHandler * _handler= nil;
    #pragma clang diagnostic pop
         NSString *methodName = message.body[@"methodName"];
         NSDictionary *params = message.body[@"params"];
-        NSString *callBackName = message.body[@"callBackName"];
+        NSString *callBackName = message.body[@"callBackID"];
         if (callBackName) {
             
             __weak  WKWebView *weakWebView = _webView;
