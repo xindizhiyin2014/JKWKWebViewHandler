@@ -56,7 +56,9 @@
     
     function newGetInfoFromNative(){
         var params = {'name':'我是jack！！！'};
-        JKEventHandler.newCallNativeFunction('newGetInfoFromNative',params,'newGetInfoFromNativeFunction',null,
+        JKEventHandler.newCallNativeFunction('newGetInfoFromNative',params,'newGetInfoFromNativeFunction',function(data){
+                                             alert(data);
+                                             },
                                              function(data){
                                              alert(data);
                                              });
