@@ -20,4 +20,14 @@
     callBack(str);
 
 }
+
+- (void)newGetInfoFromNative:(id)params :(void(^)(id response))successCallBack :(void(^)(id response))failureCallBack{
+    NSLog(@"newGetInfoFromNative %@",params);
+    if (successCallBack) {
+        successCallBack(@"success !!!");
+    }
+    if (failureCallBack) {
+        failureCallBack(@"failure !!!");
+    }
+}
 @end
