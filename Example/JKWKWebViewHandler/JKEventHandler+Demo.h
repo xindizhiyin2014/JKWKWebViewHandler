@@ -14,4 +14,8 @@
 
 - (void)getInfoFromNative:(id)params :(void(^)(id response))callBack;
 
+- (void)newGetInfoFromNative:(id)params :(void(^)(id response))successCallBack :(void(^)(id response))failureCallBack;
+
+
+
 @end

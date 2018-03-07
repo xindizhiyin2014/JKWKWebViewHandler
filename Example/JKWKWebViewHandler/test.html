@@ -18,6 +18,8 @@
       <br/>
       <div><input type="button"  value="getInfoFromNative" onclick="getInfoFromNative()"></div>
       <br/>
+      <div><input type="button"  value="newGInfoFromNative" onclick="newGetInfoFromNative()"></div>
+      <br/>
        <div><input type="button" value="cleanAllCallBacks" onclick="cleanAllCallBacks()"></div>
        <br/>
       <div><input type="button" value="点击触发JS方法(callJsConfirm)" onclick="callJsConfirm()"></div><br/>
@@ -50,6 +52,14 @@
         });
     
     
+    }
+    
+    function newGetInfoFromNative(){
+        var params = {'name':'我是jack！！！'};
+        JKEventHandler.newCallNativeFunction('newGetInfoFromNative',params,'newGetInfoFromNativeFunction',null,
+                                             function(data){
+                                             alert(data);
+                                             });
     }
     
     function callJsConfirm() {

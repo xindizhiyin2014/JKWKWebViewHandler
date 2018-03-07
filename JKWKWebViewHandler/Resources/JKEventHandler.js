@@ -22,6 +22,63 @@ callNativeFunction:function(nativeMethodName,params,callBackID,callBack){
     
     
 },
+newCallNativeFunction:function(nativeMethodName,params,callBackID,successCallBack,failureCallBack){
+    var message;
+    if(successCallBack && failureCallBack){
+        var successCallBackID = callBackID;
+        successCallBackID +='successCallBack';
+        
+        var failureCallBackID = callBackID;
+        failureCallBackID +='failureCallBack';
+        
+        message = {'type':'NewJSFunction','methodName':nativeMethodName,'params':params,'successCallBackID':successCallBackID,'failureCallBackID':failureCallBackID};
+        if(!Event._listeners[successCallBackID]){
+            Event.addEvent(successCallBackID, function(data){
+                           
+                           successCallBack(data);
+                           
+                           });
+        }
+        if(!Event._listeners[failureCallBackID]){
+            Event.addEvent(failureCallBackID, function(data){
+                           
+                           failureCallBack(data);
+                           
+                           });
+        }
+        
+        window.webkit.messageHandlers.JKEventHandler.postMessage(message);
+        
+    }else if(successCallBack && !failureCallBack){
+        var successCallBackID = callBackID;
+        successCallBackID +='successCallBack';
+        message = {'type':'NewJSFunction','methodName':nativeMethodName,'params':params,'successCallBackID':successCallBackID};
+        if(!Event._listeners[successCallBackID]){
+            Event.addEvent(successCallBackID, function(data){
+                           
+                           successCallBack(data);
+                           
+                           });
+        }
+        window.webkit.messageHandlers.JKEventHandler.postMessage(message);
+    }else if(failureCallBack && !successCallBack){
+        var failureCallBackID = callBackID;
+        failureCallBackID +='failureCallBack';
+        message = {'type':'NewJSFunction','methodName':nativeMethodName,'params':params,'failureCallBackID':failureCallBackID};
+        if(!Event._listeners[failureCallBackID]){
+            Event.addEvent(failureCallBackID, function(data){
+                           
+                           failureCallBack(data);
+                           
+                           });
+        }
+        window.webkit.messageHandlers.JKEventHandler.postMessage(message);
+    }
+    else{
+        message = {'type':'NewJSFunction','methodName':nativeMethodName,'params':params};
+        window.webkit.messageHandlers.JKEventHandler.postMessage(message);
+    }
+},
     
 callBack:function(callBackID,data){
     
