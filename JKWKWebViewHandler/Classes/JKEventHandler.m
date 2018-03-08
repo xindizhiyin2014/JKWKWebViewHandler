@@ -83,6 +83,7 @@ static JKEventHandler * _handler= nil;
             if (callBackName) {
                 __weak typeof(self) weakSelf = self;
                 [self interactWitMethodName:methodName params:params :^(id response) {
+                    
                     [weakSelf _jkCallJSCallBackWithCallBackName:callBackName response:response];
                 }];
             }else{
@@ -193,7 +194,7 @@ static JKEventHandler * _handler= nil;
     NSString *js = [NSString stringWithFormat:@"JKEventHandler.callBack('%@','%@');",callBackName,response];
     dispatch_async(dispatch_get_main_queue(), ^{
         [weakWebView evaluateJavaScript:js completionHandler:^(id _Nullable data, NSError * _Nullable error) {
-            JKEventHandlerLog(@"JKEventHandler.callBack: %@",callBackName);
+            JKEventHandlerLog(@"JKEventHandler.callBack: %@\n response: %@",callBackName,response);
         }];
     });
 }

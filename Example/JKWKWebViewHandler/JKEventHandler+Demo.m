@@ -16,8 +16,11 @@
 
 - (void)getInfoFromNative:(id)params :(void(^)(id response))callBack{
     NSLog(@"params %@",params);
-    NSString *str = @"'Hi Jack!'";
-    callBack(str);
+    NSString *str = @"Hi Jack!";
+    if(callBack){
+     callBack(str);
+    }
+    
 
 }
 

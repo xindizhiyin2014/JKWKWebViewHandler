@@ -10,8 +10,8 @@ callNativeFunction:function(nativeMethodName,params,callBackID,callBack){
         
     }else{
         message = {'methodName':nativeMethodName,'params':params,'callBackID':callBackID};
-        if(!Event._listeners[callBackID]){
-        Event.addEvent(callBackID, function(data){
+        if(!JKBridgeEvent._listeners[callBackID]){
+        JKBridgeEvent.addEvent(callBackID, function(data){
                        
                        callBack(data);
                        
@@ -32,15 +32,15 @@ newCallNativeFunction:function(nativeMethodName,params,callBackID,successCallBac
         failureCallBackID +='failureCallBack';
         
         message = {'type':'NewJSFunction','methodName':nativeMethodName,'params':params,'successCallBackID':successCallBackID,'failureCallBackID':failureCallBackID};
-        if(!Event._listeners[successCallBackID]){
-            Event.addEvent(successCallBackID, function(data){
+        if(!JKBridgeEvent._listeners[successCallBackID]){
+            JKBridgeEvent.addEvent(successCallBackID, function(data){
                            
                            successCallBack(data);
                            
                            });
         }
-        if(!Event._listeners[failureCallBackID]){
-            Event.addEvent(failureCallBackID, function(data){
+        if(!JKBridgeEvent._listeners[failureCallBackID]){
+            JKBridgeEvent.addEvent(failureCallBackID, function(data){
                            
                            failureCallBack(data);
                            
@@ -53,8 +53,8 @@ newCallNativeFunction:function(nativeMethodName,params,callBackID,successCallBac
         var successCallBackID = callBackID;
         successCallBackID +='successCallBack';
         message = {'type':'NewJSFunction','methodName':nativeMethodName,'params':params,'successCallBackID':successCallBackID};
-        if(!Event._listeners[successCallBackID]){
-            Event.addEvent(successCallBackID, function(data){
+        if(!JKBridgeEvent._listeners[successCallBackID]){
+            JKBridgeEvent.addEvent(successCallBackID, function(data){
                            
                            successCallBack(data);
                            
@@ -65,8 +65,8 @@ newCallNativeFunction:function(nativeMethodName,params,callBackID,successCallBac
         var failureCallBackID = callBackID;
         failureCallBackID +='failureCallBack';
         message = {'type':'NewJSFunction','methodName':nativeMethodName,'params':params,'failureCallBackID':failureCallBackID};
-        if(!Event._listeners[failureCallBackID]){
-            Event.addEvent(failureCallBackID, function(data){
+        if(!JKBridgeEvent._listeners[failureCallBackID]){
+            JKBridgeEvent.addEvent(failureCallBackID, function(data){
                            
                            failureCallBack(data);
                            
@@ -82,19 +82,19 @@ newCallNativeFunction:function(nativeMethodName,params,callBackID,successCallBac
     
 callBack:function(callBackID,data){
     
-    Event.fireEvent(callBackID,data);
+    JKBridgeEvent.fireEvent(callBackID,data);
     
 },
     
 removeAllCallBacks:function(data){
-    Event._listeners ={};
+    JKBridgeEvent._listeners ={};
 }
     
 };
 
 
 
-var Event = {
+var JKBridgeEvent = {
     
 _listeners: {},
     
