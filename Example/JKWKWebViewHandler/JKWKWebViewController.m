@@ -348,4 +348,25 @@ completionHandler:(void (^)(NSString * __nullable result))completionHandler {
 }
 */
 
+//synCallNativeFunction:function(nativeMethodName,callBackID){
+//    var result=null;
+//    message = {'methodName':nativeMethodName,'callBackID':callBackID};
+//    if(!JKBridgeEvent._listeners[callBackID]){
+//        JKBridgeEvent.addEvent(callBackID, function(data){
+//            result = data;
+//        });
+//    }
+//    window.webkit.messageHandlers.JKEventHandler.postMessage(message);
+//    while(result == null){
+//        
+//    }
+//    return result;
+//},
+//
+//callBack:function(callBackID,data){
+//    
+//    JKBridgeEvent.fireEvent(callBackID,data);
+//    
+//},
+
 @end
