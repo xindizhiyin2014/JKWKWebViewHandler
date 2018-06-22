@@ -157,8 +157,6 @@ static JKEventHandler * _handler= nil;
             if ([self respondsToSelector:selector]) {
                 [self _jkPerformSelector:selector withObjects:paramArray];
             }
-        
-        
     }
 }
 
@@ -191,6 +189,13 @@ static JKEventHandler * _handler= nil;
 
 - (void)_jkCallJSCallBackWithCallBackName:(NSString *)callBackName response:(id)response{
     __weak  WKWebView *weakWebView = _webView;
+    if ([response isKindOfClass:[NSDictionary class]] || [response isKindOfClass:[NSMutableDictionary class]] || [response isKindOfClass:[NSArray class]] || [response isKindOfClass:[NSMutableArray class]]) {
+        NSData *data=[NSJSONSerialization dataWithJSONObject:response options:NSJSONWritingPrettyPrinted error:nil];
+        
+        NSString *jsonStr=[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+         jsonStr = [jsonStr stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+        response = jsonStr;
+    }
     NSString *js = [NSString stringWithFormat:@"JKEventHandler.callBack('%@','%@');",callBackName,response];
     dispatch_async(dispatch_get_main_queue(), ^{
         [weakWebView evaluateJavaScript:js completionHandler:^(id _Nullable data, NSError * _Nullable error) {

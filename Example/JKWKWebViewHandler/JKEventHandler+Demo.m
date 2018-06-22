@@ -17,8 +17,12 @@
 - (void)getInfoFromNative:(id)params :(void(^)(id response))callBack{
     NSLog(@"params %@",params);
     NSString *str = @"Hi Jack!";
+    NSString *jsonStr = @"{\"name\":\"张三\"}";
+    NSDictionary *dic = @{@"name":@"张三"};
+    NSArray *arr = @[@"111",@"222"];
+    NSString *arrStr = @"[\"111\",\"222\"]";
     if(callBack){
-     callBack(str);
+        callBack(arrStr);
     }
     
 
