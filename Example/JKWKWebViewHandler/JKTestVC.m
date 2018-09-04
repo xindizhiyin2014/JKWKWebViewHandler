@@ -6,20 +6,19 @@
 //
 //
 
-#import "JKWKWebViewController.h"
+#import "JKTestVC.h"
 #import <WebKit/WebKit.h>
 #import "JKEventHandler.h"
 #import "JKEventHandler+Demo.h"
-#import "JKTestVC.h"
 
-@interface JKWKWebViewController ()<WKNavigationDelegate, WKUIDelegate>
+@interface JKTestVC ()<WKNavigationDelegate, WKUIDelegate>
 
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) UIProgressView *progressView;
 
 @end
 
-@implementation JKWKWebViewController
+@implementation JKTestVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -66,7 +65,7 @@
     
     
     
-    WKUserScript *usrScript = [[WKUserScript alloc] initWithSource:[JKEventHandler shareInstance].handlerJS injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
+    WKUserScript *usrScript = [[WKUserScript alloc] initWithSource:[JKEventHandler shareInstance].handlerJS injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:NO];
     
     // 通过JS与webview内容交互
     config.userContentController = [[WKUserContentController alloc] init];
@@ -117,15 +116,13 @@
 //    if ([self.webView canGoBack]) {
 //        [self.webView goBack];
 //    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)gofarward {
 //    if ([self.webView canGoForward]) {
 //        [self.webView goForward];
 //    }
-    JKTestVC *testVC = [JKTestVC new];
-    testVC.url = @"https://www.baidu.com";
-    [self.navigationController pushViewController:testVC animated:YES];
 }
 
 

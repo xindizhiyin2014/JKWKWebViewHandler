@@ -23,6 +23,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		BD5EF396213E464E00BE7FAC /* vconsole.min.js in Resources */ = {isa = PBXBuildFile; fileRef = BD5EF395213E464E00BE7FAC /* vconsole.min.js */; };
+		BD5EF399213E465800BE7FAC /* JKTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5EF398213E465800BE7FAC /* JKTestVC.m */; };
 		C8EE5B946922D16B39F1B67D /* Pods_JKWKWebViewHandler_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8C701BD789552D7884C61C /* Pods_JKWKWebViewHandler_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,9 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BD8A6EA05D41EA32CC2AFD4 /* Pods-JKWKWebViewHandler_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKWKWebViewHandler_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JKWKWebViewHandler_Example/Pods-JKWKWebViewHandler_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A7F75EBC6C71EFE541D70BD9 /* Pods_JKWKWebViewHandler_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKWKWebViewHandler_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD5EF395213E464E00BE7FAC /* vconsole.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = vconsole.min.js; sourceTree = "<group>"; };
+		BD5EF397213E465800BE7FAC /* JKTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTestVC.h; sourceTree = "<group>"; };
+		BD5EF398213E465800BE7FAC /* JKTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTestVC.m; sourceTree = "<group>"; };
 		CCC3EAD3C5E694B11BC872BC /* Pods-JKWKWebViewHandler_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKWKWebViewHandler_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JKWKWebViewHandler_Example/Pods-JKWKWebViewHandler_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F00AD6100FDA136DC71599DD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F1CC3A2EF9C661999B0437CF /* JKWKWebViewHandler.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JKWKWebViewHandler.podspec; path = ../JKWKWebViewHandler.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -139,6 +144,8 @@
 				046360961E8FCB4D0021A260 /* JKEventHandler+Demo.m */,
 				0463609C1E8FF5860021A260 /* JKWKWebViewController.h */,
 				0463609D1E8FF5860021A260 /* JKWKWebViewController.m */,
+				BD5EF397213E465800BE7FAC /* JKTestVC.h */,
+				BD5EF398213E465800BE7FAC /* JKTestVC.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -154,6 +161,7 @@
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
 				04E30BBF1E8F57F5006A1704 /* test.html */,
+				BD5EF395213E464E00BE7FAC /* vconsole.min.js */,
 				6003F59B195388D20070C39A /* JKWKWebViewHandler-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -285,6 +293,7 @@
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				04E30BC01E8F57F5006A1704 /* test.html in Resources */,
+				BD5EF396213E464E00BE7FAC /* vconsole.min.js in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +417,7 @@
 			files = (
 				6003F59E195388D20070C39A /* JKAppDelegate.m in Sources */,
 				046360971E8FCB4D0021A260 /* JKEventHandler+Demo.m in Sources */,
+				BD5EF399213E465800BE7FAC /* JKTestVC.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				0463609E1E8FF5860021A260 /* JKWKWebViewController.m in Sources */,
 			);
