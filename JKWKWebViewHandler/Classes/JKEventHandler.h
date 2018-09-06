@@ -9,16 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <webkit/webkit.h>
 
-extern const NSString *EventHandler;
+static NSString * const JKEventHandlerName = @"JKEventHandler";
 
 @interface JKEventHandler : NSObject<WKScriptMessageHandler>
 
 @property (nonatomic, weak) WKWebView *webView;
-@property (nonatomic, strong) NSString  *handlerJS;
 
-+ (instancetype)shareInstance;
++ (NSString *)handlerJS;
 
 
-+ (void)getInject:(WKWebView *)webView;
+
+/**
+ 清空handler的数据信息， 注入的脚本。绑定事件信息等等
+ */
++ (void)cleanHandler:(JKEventHandler *)handler;
 
 @end

@@ -16,7 +16,6 @@
 #define JKEventHandlerLog(...)
 #endif
 
-const NSString *EventHandler = @"JKEventHandler";
 
 @interface JKEventHandlerEmptyObject :NSObject
 
@@ -28,20 +27,16 @@ const NSString *EventHandler = @"JKEventHandler";
 
 @implementation JKEventHandler
 
-static JKEventHandler * _handler= nil;
-+ (instancetype)shareInstance{
++ (void)cleanHandler:(JKEventHandler *)handler{
+    if (handler.webView) {
+        [handler.webView evaluateJavaScript:@"JKEventHandler.removeAllCallBacks();" completionHandler:nil];//删除所有的回调事件
+        [handler.webView.configuration.userContentController removeScriptMessageHandlerForName:JKEventHandlerName];
+    }
+    handler = nil;
     
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _handler =[JKEventHandler new];
-        _handler.handlerJS = [_handler getJsString];
-        
-    });
-    return _handler;
 }
 
-
-- (NSString *)getJsString{
++ (NSString *)handlerJS{
 
     NSString *path =[[NSBundle bundleForClass:[self class]] pathForResource:@"JKEventHandler" ofType:@"js"];
     NSString *handlerJS = [NSString stringWithContentsOfFile:path encoding:kCFStringEncodingUTF8 error:nil];
@@ -49,21 +44,13 @@ static JKEventHandler * _handler= nil;
     return handlerJS;
 }
 
-+ (void)getInject:(WKWebView *)webView{
-
-    
-    [JKEventHandler shareInstance].webView = webView;
-    
-}
-
-
 #pragma mark - WKScriptMessageHandler
 - (void)userContentController:(WKUserContentController *)userContentController
       didReceiveScriptMessage:(WKScriptMessage *)message {
    // NSLog(@"message :%@",message.body);
     #pragma clang diagnostic push
     #pragma clang diagnostic ignored"-Wincompatible-pointer-types-discards-qualifiers"
-    if ([message.name isEqualToString:EventHandler]) {
+    if ([message.name isEqualToString:JKEventHandlerName]) {
    #pragma clang diagnostic pop
         NSString *methodName = message.body[@"methodName"];
         NSDictionary *params = message.body[@"params"];
@@ -92,7 +79,6 @@ static JKEventHandler * _handler= nil;
         }
         
     }
-    
     
 }
 

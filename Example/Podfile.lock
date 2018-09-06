@@ -1,16 +1,16 @@
 PODS:
-  - JKWKWebViewHandler (0.2.2)
+  - JKWKWebViewHandler (0.3.0)
 
 DEPENDENCIES:
   - JKWKWebViewHandler (from `../`)
 
 EXTERNAL SOURCES:
   JKWKWebViewHandler:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  JKWKWebViewHandler: d27c366f7f5d56b2f71b552358ae6a3678292a95
+  JKWKWebViewHandler: b1804df71e06730b0ce7243f6e60385eede58b12
 
 PODFILE CHECKSUM: f3046853509cf550cdfee8147c8c991078d478b6
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

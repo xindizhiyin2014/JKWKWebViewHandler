@@ -24,7 +24,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		BD5EF396213E464E00BE7FAC /* vconsole.min.js in Resources */ = {isa = PBXBuildFile; fileRef = BD5EF395213E464E00BE7FAC /* vconsole.min.js */; };
-		BD5EF399213E465800BE7FAC /* JKTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5EF398213E465800BE7FAC /* JKTestVC.m */; };
+		BD5EF3A62140E19300BE7FAC /* JKTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5EF3A52140E19300BE7FAC /* JKTestVC.m */; };
 		C8EE5B946922D16B39F1B67D /* Pods_JKWKWebViewHandler_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8C701BD789552D7884C61C /* Pods_JKWKWebViewHandler_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,8 +69,8 @@
 		9BD8A6EA05D41EA32CC2AFD4 /* Pods-JKWKWebViewHandler_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKWKWebViewHandler_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JKWKWebViewHandler_Example/Pods-JKWKWebViewHandler_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A7F75EBC6C71EFE541D70BD9 /* Pods_JKWKWebViewHandler_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKWKWebViewHandler_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD5EF395213E464E00BE7FAC /* vconsole.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = vconsole.min.js; sourceTree = "<group>"; };
-		BD5EF397213E465800BE7FAC /* JKTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTestVC.h; sourceTree = "<group>"; };
-		BD5EF398213E465800BE7FAC /* JKTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTestVC.m; sourceTree = "<group>"; };
+		BD5EF3A42140E19300BE7FAC /* JKTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTestVC.h; sourceTree = "<group>"; };
+		BD5EF3A52140E19300BE7FAC /* JKTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTestVC.m; sourceTree = "<group>"; };
 		CCC3EAD3C5E694B11BC872BC /* Pods-JKWKWebViewHandler_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKWKWebViewHandler_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JKWKWebViewHandler_Example/Pods-JKWKWebViewHandler_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F00AD6100FDA136DC71599DD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F1CC3A2EF9C661999B0437CF /* JKWKWebViewHandler.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JKWKWebViewHandler.podspec; path = ../JKWKWebViewHandler.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -144,8 +144,8 @@
 				046360961E8FCB4D0021A260 /* JKEventHandler+Demo.m */,
 				0463609C1E8FF5860021A260 /* JKWKWebViewController.h */,
 				0463609D1E8FF5860021A260 /* JKWKWebViewController.m */,
-				BD5EF397213E465800BE7FAC /* JKTestVC.h */,
-				BD5EF398213E465800BE7FAC /* JKTestVC.m */,
+				BD5EF3A42140E19300BE7FAC /* JKTestVC.h */,
+				BD5EF3A52140E19300BE7FAC /* JKTestVC.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -219,7 +219,6 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				4B4E5D3B29FF5E4C480FDB6C /* [CP] Embed Pods Frameworks */,
-				E326E87E0A6A3F6FBB44A1D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,8 +237,6 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				E742542D41788987C430439F /* [CP] Embed Pods Frameworks */,
-				2BAC38CD5211BE2FED88D2BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -309,21 +306,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2BAC38CD5211BE2FED88D2BC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JKWKWebViewHandler_Tests/Pods-JKWKWebViewHandler_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4AA276DEB7FBE3CC06DE8C4E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -378,36 +360,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E326E87E0A6A3F6FBB44A1D6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JKWKWebViewHandler_Example/Pods-JKWKWebViewHandler_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E742542D41788987C430439F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JKWKWebViewHandler_Tests/Pods-JKWKWebViewHandler_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -417,7 +369,7 @@
 			files = (
 				6003F59E195388D20070C39A /* JKAppDelegate.m in Sources */,
 				046360971E8FCB4D0021A260 /* JKEventHandler+Demo.m in Sources */,
-				BD5EF399213E465800BE7FAC /* JKTestVC.m in Sources */,
+				BD5EF3A62140E19300BE7FAC /* JKTestVC.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				0463609E1E8FF5860021A260 /* JKWKWebViewController.m in Sources */,
 			);

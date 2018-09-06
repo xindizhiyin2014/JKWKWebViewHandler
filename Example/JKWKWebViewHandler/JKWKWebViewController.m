@@ -16,7 +16,7 @@
 
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) UIProgressView *progressView;
-
+@property (nonatomic,strong) JKEventHandler *eventHandler;
 @end
 
 @implementation JKWKWebViewController
@@ -47,7 +47,8 @@
 
 
 - (void)configureWKWebview{
-
+    
+    self.eventHandler = [JKEventHandler new];
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     // 设置偏好设置
     config.preferences = [[WKPreferences alloc] init];
@@ -66,7 +67,7 @@
     
     
     
-    WKUserScript *usrScript = [[WKUserScript alloc] initWithSource:[JKEventHandler shareInstance].handlerJS injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
+    WKUserScript *usrScript = [[WKUserScript alloc] initWithSource:[JKEventHandler handlerJS] injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
     
     // 通过JS与webview内容交互
     config.userContentController = [[WKUserContentController alloc] init];
@@ -74,7 +75,7 @@
     [config.userContentController addUserScript:usrScript];
     // 注入JS对象名称AppModel，当JS通过AppModel来调用时，
     // 我们可以在WKScriptMessageHandler代理中接收到
-    [config.userContentController addScriptMessageHandler:[JKEventHandler shareInstance] name:EventHandler];
+    [config.userContentController addScriptMessageHandler:self.eventHandler  name:JKEventHandlerName];
    
     
     
@@ -85,7 +86,7 @@
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
     [self.view addSubview:_webView];
     
-    [JKEventHandler getInject:_webView];
+    self.eventHandler.webView = _webView;
     
     // 导航代理
     _webView.navigationDelegate = self;
@@ -329,11 +330,7 @@ completionHandler:(void (^)(NSString * __nullable result))completionHandler {
 
 - (void)dealloc{
     
-    [_webView.configuration.userContentController removeScriptMessageHandlerForName:EventHandler];
-    [_webView evaluateJavaScript:@"JKEventHandler.removeAllCallBacks();" completionHandler:^(id _Nullable data, NSError * _Nullable error) {
-        
-
-    }];//删除所有的回调事件
+    [JKEventHandler cleanHandler:self.eventHandler];
     
 }
 
