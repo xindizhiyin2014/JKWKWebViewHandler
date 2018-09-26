@@ -24,4 +24,13 @@ static NSString * const JKEventHandlerName = @"JKEventHandler";
  */
 + (void)cleanHandler:(JKEventHandler *)handler;
 
+
+/**
+ 执行js脚本
+
+ @param js js脚本
+ @param completed 回调
+ */
+- (void)evaluateJavaScript:(NSString *)js completed:(void(^)(id data, NSError *error))completed;
+
 @end

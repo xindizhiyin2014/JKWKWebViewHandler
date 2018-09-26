@@ -190,6 +190,14 @@
     });
 }
 
+- (void)evaluateJavaScript:(NSString *)js completed:(void(^)(id data, NSError *error))completed{
+    [self.webView evaluateJavaScript:js completionHandler:^(id _Nullable data, NSError * _Nullable error) {
+        if (completed) {
+            completed(data,error);
+        }
+    }];
+}
+
 
 
 
