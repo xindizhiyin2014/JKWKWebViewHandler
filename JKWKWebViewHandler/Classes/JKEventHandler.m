@@ -47,85 +47,43 @@
 #pragma mark - WKScriptMessageHandler
 - (void)userContentController:(WKUserContentController *)userContentController
       didReceiveScriptMessage:(WKScriptMessage *)message {
-   // NSLog(@"message :%@",message.body);
     #pragma clang diagnostic push
     #pragma clang diagnostic ignored"-Wincompatible-pointer-types-discards-qualifiers"
     if ([message.name isEqualToString:JKEventHandlerName]) {
    #pragma clang diagnostic pop
-        NSString *methodName = message.body[@"methodName"];
+        NSString *plugin = message.body[@"plugin"];
+        NSString *funcName = message.body[@"func"];
         NSDictionary *params = message.body[@"params"];
-        
-        NSString *type = message.body[@"type"];
-        if ([type isEqualToString:@"NewJSFunction"]) {
-            NSString *successCallBackID = message.body[@"successCallBackID"];
-            NSString *failureCallBackID = message.body[@"failureCallBackID"];
-            __weak typeof(self) weakSelf = self;
-                [self newInteractWitMethodName:methodName params:params success:^(id response) {
-                    [weakSelf _jkCallJSCallBackWithCallBackName:successCallBackID response:response];
-                } failure:^(id response) {
-                    [weakSelf _jkCallJSCallBackWithCallBackName:failureCallBackID response:response];
-                }];
-        }else{
-            NSString *callBackName = message.body[@"callBackID"];
-            if (callBackName) {
-                __weak typeof(self) weakSelf = self;
-                [self interactWitMethodName:methodName params:params :^(id response) {
-                    
-                    [weakSelf _jkCallJSCallBackWithCallBackName:callBackName response:response];
-                }];
-            }else{
-                [self interactWitMethodName:methodName params:params :nil];
+        NSString *successCallBackID = message.body[@"successCallBackID"];
+        NSString *failureCallBackID = message.body[@"failureCallBackID"];
+        __weak typeof(self) weakSelf = self;
+        [self interactWithPlugin:plugin funcName:funcName params:params success:^(id response) {
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            if (strongSelf) {
+                [strongSelf _jkCallJSCallBackWithCallBackName:successCallBackID response:response];
             }
-        }
-        
-    }
-    
-}
-
-
-- (void)interactWitMethodName:(NSString *)methodName params:(NSDictionary *)params :(void(^)(id response))callBack{
-    
-    if (params) {
-        methodName = [NSString stringWithFormat:@"%@:",methodName];
-        if (callBack) {
-            methodName = [NSString stringWithFormat:@"%@:",methodName];
-            SEL selector =NSSelectorFromString(methodName);
-            NSArray *paramArray =@[params,callBack];
-            if ([self respondsToSelector:selector]) {
-                [self _jkPerformSelector:selector withObjects:paramArray];
-            }
-        }else{
-            SEL selector =NSSelectorFromString(methodName);
-            NSArray *paramArray =@[params];
-            if ([self respondsToSelector:selector]) {
-                [self _jkPerformSelector:selector withObjects:paramArray];
-            }
-        }
-    }else{
-        
-        if (callBack) {
-            methodName = [NSString stringWithFormat:@"%@:",methodName];
-            SEL selector =NSSelectorFromString(methodName);
-            NSArray *paramArray =@[callBack];
-            if ([self respondsToSelector:selector]) {
-                [self _jkPerformSelector:selector withObjects:paramArray];
-            }
-        }else{
-            SEL selector =NSSelectorFromString(methodName);
             
-            if ([self respondsToSelector:selector]) {
-                [self _jkPerformSelector:selector withObjects:nil];
-            }
-        }
+        } failure:^(id response) {
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            if (strongSelf) {
+                [strongSelf _jkCallJSCallBackWithCallBackName:failureCallBackID response:response];}
+        }];
+        
     }
+    
 }
 
-- (void)newInteractWitMethodName:(NSString *)methodName params:(NSDictionary *)params success:(void(^)(id response))successCallBack failure:(void(^)(id response))failureCallBack{
-    if (params) {
-        methodName = [NSString stringWithFormat:@"%@:",methodName];
+- (void)interactWithPlugin:(NSString *)plugin funcName:(NSString *)funcName params:(NSDictionary *)params success:(void(^)(id response))successCallBack failure:(void(^)(id response))failureCallBack{
+    funcName = [NSString stringWithFormat:@"%@:::",funcName];
+    SEL selector =NSSelectorFromString(funcName);
+    if ([NSClassFromString(plugin) respondsToSelector:selector]) {
+        id parameter = nil;
+        if (params) {
+            parameter = params;
+        }else{
+            parameter = [JKEventHandlerEmptyObject class];
+        }
         
-            methodName = [NSString stringWithFormat:@"%@::",methodName];
-            SEL selector =NSSelectorFromString(methodName);
         id successBlock=nil;
         if (successCallBack) {
             successBlock = successCallBack;
@@ -139,21 +97,24 @@
         }else{
             failureBlock = [JKEventHandlerEmptyObject class];
         }
-            NSArray *paramArray =@[params,successBlock,failureBlock];
-            if ([self respondsToSelector:selector]) {
-                [self _jkPerformSelector:selector withObjects:paramArray];
-            }
+        NSArray *paramArray =@[parameter,successBlock,failureBlock];
+        [self class:NSClassFromString(plugin) performSelector:selector withObjects:paramArray];
+    }else{
+        if (failureCallBack) {
+            NSError *error = [[NSError alloc] initWithDomain:@"JKEventHandler" code:-10000 userInfo:@{@"msg":[NSString stringWithFormat:@"%@ unsupport %@",plugin,funcName]}];
+            failureCallBack(error);
+        }
     }
+    
 }
 
-- (id)_jkPerformSelector:(SEL)aSelector withObjects:(NSArray *)objects {
-    NSMethodSignature *signature = [self methodSignatureForSelector:aSelector];
+- (void)class:(Class)class performSelector:(SEL)aSelector withObjects:(NSArray *)objects {
+    NSMethodSignature *signature = [NSMethodSignature signatureWithObjCTypes:"v@:@@@"];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-    [invocation setTarget:self];
+    [invocation setTarget:class];
     [invocation setSelector:aSelector];
 
     NSUInteger i = 1;
-    
     for (id object in objects) {
         id tempObject = object;
         if (![tempObject isKindOfClass:[NSObject class]]) {
@@ -165,16 +126,10 @@
     }
     [invocation invoke];
     
-    if ([signature methodReturnLength]) {
-        id data;
-        [invocation getReturnValue:&data];
-        return data;
-    }
-    return nil;
 }
 
 - (void)_jkCallJSCallBackWithCallBackName:(NSString *)callBackName response:(id)response{
-    __weak  WKWebView *weakWebView = _webView;
+    WKWebView *weakWebView = _webView;
     if ([response isKindOfClass:[NSDictionary class]] || [response isKindOfClass:[NSMutableDictionary class]] || [response isKindOfClass:[NSArray class]] || [response isKindOfClass:[NSMutableArray class]]) {
         NSData *data=[NSJSONSerialization dataWithJSONObject:response options:NSJSONWritingPrettyPrinted error:nil];
         
@@ -197,10 +152,5 @@
         }
     }];
 }
-
-
-
-
-
 
 @end

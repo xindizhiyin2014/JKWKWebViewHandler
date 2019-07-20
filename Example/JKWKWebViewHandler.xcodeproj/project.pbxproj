@@ -25,6 +25,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		BD5EF396213E464E00BE7FAC /* vconsole.min.js in Resources */ = {isa = PBXBuildFile; fileRef = BD5EF395213E464E00BE7FAC /* vconsole.min.js */; };
 		BD5EF3A62140E19300BE7FAC /* JKTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5EF3A52140E19300BE7FAC /* JKTestVC.m */; };
+		BD9DF4BA22E3D5C90041F315 /* JKPluginA.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9DF4B922E3D5C90041F315 /* JKPluginA.m */; };
 		C8EE5B946922D16B39F1B67D /* Pods_JKWKWebViewHandler_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8C701BD789552D7884C61C /* Pods_JKWKWebViewHandler_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,8 @@
 		BD5EF395213E464E00BE7FAC /* vconsole.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = vconsole.min.js; sourceTree = "<group>"; };
 		BD5EF3A42140E19300BE7FAC /* JKTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKTestVC.h; sourceTree = "<group>"; };
 		BD5EF3A52140E19300BE7FAC /* JKTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKTestVC.m; sourceTree = "<group>"; };
+		BD9DF4B822E3D5C90041F315 /* JKPluginA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKPluginA.h; sourceTree = "<group>"; };
+		BD9DF4B922E3D5C90041F315 /* JKPluginA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKPluginA.m; sourceTree = "<group>"; };
 		CCC3EAD3C5E694B11BC872BC /* Pods-JKWKWebViewHandler_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKWKWebViewHandler_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-JKWKWebViewHandler_Example/Pods-JKWKWebViewHandler_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F00AD6100FDA136DC71599DD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F1CC3A2EF9C661999B0437CF /* JKWKWebViewHandler.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JKWKWebViewHandler.podspec; path = ../JKWKWebViewHandler.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -142,6 +145,8 @@
 				6003F59D195388D20070C39A /* JKAppDelegate.m */,
 				046360951E8FCB4D0021A260 /* JKEventHandler+Demo.h */,
 				046360961E8FCB4D0021A260 /* JKEventHandler+Demo.m */,
+				BD9DF4B822E3D5C90041F315 /* JKPluginA.h */,
+				BD9DF4B922E3D5C90041F315 /* JKPluginA.m */,
 				0463609C1E8FF5860021A260 /* JKWKWebViewController.h */,
 				0463609D1E8FF5860021A260 /* JKWKWebViewController.m */,
 				BD5EF3A42140E19300BE7FAC /* JKTestVC.h */,
@@ -268,6 +273,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -368,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* JKAppDelegate.m in Sources */,
+				BD9DF4BA22E3D5C90041F315 /* JKPluginA.m in Sources */,
 				046360971E8FCB4D0021A260 /* JKEventHandler+Demo.m in Sources */,
 				BD5EF3A62140E19300BE7FAC /* JKTestVC.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
