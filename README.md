@@ -67,9 +67,9 @@ exec:function(plugin,funcName,params,successCallBack,failureCallBack){
  
  //params:this is the data you want to send to native.
 
- //callBackID:this is the callBackIdentifier you should to specified if you need a callBack. you shoud make sure it is unique
+ //successCallBack:this is the success block
 
- //callBack:this is the content of the callback.
+ //failureCallBack:this is  the failure block
 
 }
 
