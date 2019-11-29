@@ -33,4 +33,9 @@ static NSString * const JKEventHandlerName = @"JKEventHandler";
  */
 - (void)evaluateJavaScript:(NSString *)js completed:(void(^)(id data, NSError *error))completed;
 
+/// 执行js脚本，同步返回
+/// @param js js脚本
+/// @param error 错误
+- (id)synEvaluateJavaScript:(NSString *)js error:(NSError **)error;
+
 @end

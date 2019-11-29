@@ -198,6 +198,30 @@
     }];
 }
 
+- (id)synEvaluateJavaScript:(NSString *)js error:(NSError **)error
+{
+   __block id result = nil;
+    __block BOOL success = NO;
+    __block NSError *resultError = nil;
+    [self.webView evaluateJavaScript:js completionHandler:^(id tmpResult, NSError * _Nullable tmpError) {
+        if (!tmpError) {
+            result = tmpResult;
+            success = YES;
+        } else {
+            resultError = tmpError;
+        }
+        success = YES;
+    }];
+    
+    while (!success) {
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+    }
+    if (error != NULL) {
+        *error = resultError;
+    }
+    return result;
+}
+
 
 
 
