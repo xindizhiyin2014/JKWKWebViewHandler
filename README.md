@@ -60,57 +60,59 @@ WKUserScript *usrScript = [[WKUserScript alloc] initWithSource:[JKEventHandler s
 ### step 2
 this is for JS developer
 ```
-callNativeFunction:function(nativeMethodName,params,callBackID,callBack){
+exec:function(plugin,funcName,params,successCallBack,failureCallBack){
  //when you want to call native function ,you should call this function with params.
-
- //nativeMethodName: this is the functionName of native.
-
+ //plugin:the native className to handle the js func
+ //funcName:the native funcName
+ 
  //params:this is the data you want to send to native.
 
- //callBackID:this is the callBackIdentifier you should to specified if you need a callBack. you shoud make sure it is unique
+ //successCallBack:this is the success block
 
- //callBack:this is the content of the callback.
+ //failureCallBack:this is  the failure block
 
 }
 
 ```
 for Example:
 ```
-JKEventHandler.callNativeFunction('getInfoFromNative',params,'getInfoFromNativeCallback',function(data){
-            alert(data);
-        });
+function getInfoFromNative(){
+var params = {'name':'我是jack！！！'};
+JKEventHandler.exec('JKPluginA','getNativeInfo',params,function(data){
+console.log('succedss block');
+alert(data);
+},
+function(data){
+console.log('fail block');
+alert(data);
+});
+}
 ```
 
 ### step 3
 
 this is for native developer
-if you want interect with H5,you should create a category  of class JKEventHandler. and create the function the H5 specified to interected with you. for example:
+if you want interect with H5,you should create a plugin  class  and create the function the H5 specified to interected with you. for example:
 
 ```
-#import <JKWKWebViewHandler/JKWKWebViewHandler.h>
+#import <Foundation/Foundation.h>
 
-@interface JKEventHandler (Demo)
-
-- (void)sendInfoToNative:(id)params;
-
-- (void)getInfoFromNative:(id)params :(void(^)(id response))callBack;
-
+@interface JKPluginA : NSObject
++ (void)getNativeInfo:(NSDictionary *)params :(void(^)(id response))successCallBack :(void(^)(id response))failureCallBack;
 @end
 
 
-#import "JKEventHandler+Demo.h"
+#import "JKPluginA.h"
 
-@implementation JKEventHandler (Demo)
-
-- (void)sendInfoToNative:(id)params{
-    NSLog(@"sendInfoToNative :%@",params);
+@implementation JKPluginA
++ (void)getNativeInfo:(NSDictionary *)params :(void(^)(id response))successCallBack :(void(^)(id response))failureCallBack{
+NSLog(@"getNativeInfo %@",params);
+if (successCallBack) {
+successCallBack(@"success !!!");
 }
-
-- (void)getInfoFromNative:(id)params :(void(^)(id response))callBack{
-    NSLog(@"params %@",params);
-    NSString *str = @"'Hi Jack!'";
-    callBack(str);
-
+if (failureCallBack) {
+failureCallBack(@"failure !!!");
+}
 }
 @end
 ```

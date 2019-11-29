@@ -1,83 +1,42 @@
 var JKEventHandler ={
-    
-callNativeFunction:function(nativeMethodName,params,callBackID,callBack){
+
+exec:function(plugin,funcName,params,successCallBack,failureCallBack){
     var message;
-    
-    if(!callBack){
-        
-        message = {'methodName':nativeMethodName,'params':params};
-        window.webkit.messageHandlers.JKEventHandler.postMessage(message);
-        
-    }else{
-        message = {'methodName':nativeMethodName,'params':params,'callBackID':callBackID};
-        if(!JKBridgeEvent._listeners[callBackID]){
-        JKBridgeEvent.addEvent(callBackID, function(data){
-                       
-                       callBack(data);
-                       
-                       });
-        }
-        window.webkit.messageHandlers.JKEventHandler.postMessage(message);
-    }
-    
-    
-},
-newCallNativeFunction:function(nativeMethodName,params,callBackID,successCallBack,failureCallBack){
-    var message;
-    if(successCallBack && failureCallBack){
-        var successCallBackID = callBackID;
-        successCallBackID +='successCallBack';
-        
-        var failureCallBackID = callBackID;
-        failureCallBackID +='failureCallBack';
-        
-        message = {'type':'NewJSFunction','methodName':nativeMethodName,'params':params,'successCallBackID':successCallBackID,'failureCallBackID':failureCallBackID};
+    var successCallBackID = plugin + '_' + funcName + '_' + 'successCallBack';
+    var failureCallBackID = plugin + '_' + funcName + '_' + 'failureCallBack';
+    if (successCallBack){
         if(!JKBridgeEvent._listeners[successCallBackID]){
             JKBridgeEvent.addEvent(successCallBackID, function(data){
-                           
-                           successCallBack(data);
-                           
-                           });
+                                   
+                                   successCallBack(data);
+                                   
+                                   });
         }
+    }
+    
+    if (failureCallBack){
         if(!JKBridgeEvent._listeners[failureCallBackID]){
             JKBridgeEvent.addEvent(failureCallBackID, function(data){
-                           
-                           failureCallBack(data);
-                           
-                           });
+                                   
+                                   failureCallBack(data);
+                                   
+                                   });
         }
-        
-        window.webkit.messageHandlers.JKEventHandler.postMessage(message);
+    }
+    
+    if(successCallBack && failureCallBack){
+        message = {'plugin':plugin,'func':funcName,'params':params,'successCallBackID':successCallBackID,'failureCallBackID':failureCallBackID};
         
     }else if(successCallBack && !failureCallBack){
-        var successCallBackID = callBackID;
-        successCallBackID +='successCallBack';
-        message = {'type':'NewJSFunction','methodName':nativeMethodName,'params':params,'successCallBackID':successCallBackID};
-        if(!JKBridgeEvent._listeners[successCallBackID]){
-            JKBridgeEvent.addEvent(successCallBackID, function(data){
-                           
-                           successCallBack(data);
-                           
-                           });
-        }
-        window.webkit.messageHandlers.JKEventHandler.postMessage(message);
+        message = {'plugin':plugin,'func':funcName,'params':params,'successCallBackID':successCallBackID};
     }else if(failureCallBack && !successCallBack){
-        var failureCallBackID = callBackID;
-        failureCallBackID +='failureCallBack';
-        message = {'type':'NewJSFunction','methodName':nativeMethodName,'params':params,'failureCallBackID':failureCallBackID};
-        if(!JKBridgeEvent._listeners[failureCallBackID]){
-            JKBridgeEvent.addEvent(failureCallBackID, function(data){
-                           
-                           failureCallBack(data);
-                           
-                           });
-        }
-        window.webkit.messageHandlers.JKEventHandler.postMessage(message);
+        message = {'plugin':plugin,'func':funcName,'params':params,'failureCallBackID':failureCallBackID};
     }
     else{
-        message = {'type':'NewJSFunction','methodName':nativeMethodName,'params':params};
-        window.webkit.messageHandlers.JKEventHandler.postMessage(message);
+        message = {'plugin':plugin,'func':funcName,'params':params};
+        
     }
+    window.webkit.messageHandlers.JKEventHandler.postMessage(message);
 },
     
 callBack:function(callBackID,data){

@@ -17,13 +17,10 @@ static NSString * const JKEventHandlerName = @"JKEventHandler";
 
 + (NSString *)handlerJS;
 
-
-
 /**
  清空handler的数据信息， 注入的脚本。绑定事件信息等等
  */
 + (void)cleanHandler:(JKEventHandler *)handler;
-
 
 /**
  执行js脚本

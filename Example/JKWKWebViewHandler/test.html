@@ -31,12 +31,9 @@
         
         <div style="margin-top: 100px">
             <h1 style="color: red;">教你如何用H5与OC进行交互,并且把H5输入的内容显示到当前的控制器上</h1><br/>
-            <div><input type="button" value="sendInfoToNative" onclick="sendInfoToNative()"></div>
-            <br/>
             <div><input type="button"  value="getInfoFromNative" onclick="getInfoFromNative()"></div>
             <br/>
-            <div><input type="button"  value="newGInfoFromNative" onclick="newGetInfoFromNative()"></div>
-            <br/>
+            
             <div><input type="button" value="cleanAllCallBacks" onclick="cleanAllCallBacks()"></div>
             <br/>
             <div><input type="button" value="点击触发JS方法(callJsConfirm)" onclick="callJsConfirm()"></div><br/>
@@ -46,33 +43,17 @@
             <div><input type="button" value="点击触发JS输入方法(callJsInput) " onclick="callJsInput()"></div><br/>
         </div>
         <script type="text/javascript">
-            function sendInfoToNative() {
-               console.log('sendInfoToNative 调用');
-                
-                var params ={'Phone':'13566668888'};
-                
-                JKEventHandler.callNativeFunction('sendInfoToNative',params,null,null);
-                
-            }
-        
+            
         function getInfoFromNative(){
-          console.log('getInfoFromNative 调用');
-            var params = {'Phone':'13933333333'};
-            JKEventHandler.callNativeFunction('getInfoFromNative',params,'getInfoFromNativekkk',function(data){
-                                              console.log(data);                            alert(data);
-                                              });
-                                              
-                                              
-        }
-        
-        function newGetInfoFromNative(){
             var params = {'name':'我是jack！！！'};
-            JKEventHandler.newCallNativeFunction('newGetInfoFromNative',params,'newGetInfoFromNativeFunction',function(data){
-                                                 alert(data);
-                                                 },
-                                                 function(data){
-                                                 alert(data);
-                                                 });
+            JKEventHandler.exec('JKPluginA','getNativeInfo',params,function(data){
+                                console.log('succedss block');
+                                alert(data);
+                                },
+                                function(data){
+                                console.log('fail block');
+                                alert(data);
+                                });
         }
         
         function callJsConfirm() {
