@@ -145,7 +145,8 @@
     });
 }
 
-- (void)evaluateJavaScript:(NSString *)js completed:(void(^)(id data, NSError *error))completed{
+- (void)evaluateJavaScript:(NSString *)js
+                 completed:(void(^)(id data, NSError *error))completed{
     [self.webView evaluateJavaScript:js completionHandler:^(id _Nullable data, NSError * _Nullable error) {
         if (completed) {
             completed(data,error);
@@ -153,7 +154,8 @@
     }];
 }
 
-- (id)synEvaluateJavaScript:(NSString *)js error:(NSError **)error
+- (id)synEvaluateJavaScript:(NSString *)js
+                      error:(NSError **)error
 {
    __block id result = nil;
     __block BOOL success = NO;
