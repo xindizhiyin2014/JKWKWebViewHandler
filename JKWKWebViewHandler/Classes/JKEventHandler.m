@@ -7,23 +7,12 @@
 //
 
 #import "JKEventHandler.h"
-#import <webkit/webkit.h>
-#import <objc/message.h>
-
+#import <JKDataHelper/JKDataHelper.h>
 #ifdef DEBUG
 #define JKEventHandlerLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
 #define JKEventHandlerLog(...)
 #endif
-
-
-@interface JKEventHandlerEmptyObject :NSObject
-
-@end
-
-@implementation JKEventHandlerEmptyObject
-
-@end
 
 @implementation JKEventHandler
 
@@ -51,11 +40,11 @@
     #pragma clang diagnostic ignored"-Wincompatible-pointer-types-discards-qualifiers"
     if ([message.name isEqualToString:JKEventHandlerName]) {
    #pragma clang diagnostic pop
-        NSString *plugin = message.body[@"plugin"];
-        NSString *funcName = message.body[@"func"];
-        NSDictionary *params = message.body[@"params"];
-        NSString *successCallBackID = message.body[@"successCallBackID"];
-        NSString *failureCallBackID = message.body[@"failureCallBackID"];
+        NSString *plugin = [message.body jk_stringForKey:@"plugin"];
+        NSString *funcName = [message.body jk_stringForKey:@"func"];
+        NSDictionary *params = [message.body jk_dictionaryForKey:@"params"];
+        NSString *successCallBackID = [message.body jk_stringForKey:@"successCallBackID"];
+        NSString *failureCallBackID = [message.body jk_stringForKey:@"failureCallBackID"];
         __weak typeof(self) weakSelf = self;
         [self interactWithPlugin:plugin funcName:funcName params:params success:^(id response) {
             __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -68,64 +57,27 @@
             if (strongSelf) {
                 [strongSelf _jkCallJSCallBackWithCallBackName:failureCallBackID response:response];}
         }];
-        
     }
-    
 }
 
-- (void)interactWithPlugin:(NSString *)plugin funcName:(NSString *)funcName params:(NSDictionary *)params success:(void(^)(id response))successCallBack failure:(void(^)(id response))failureCallBack{
+- (void)interactWithPlugin:(NSString *)plugin
+                  funcName:(NSString *)funcName
+                    params:(NSDictionary *)params
+                   success:(void(^)(id response))successCallBack
+                   failure:(void(^)(id response))failureCallBack{
     funcName = [NSString stringWithFormat:@"%@:::",funcName];
     SEL selector =NSSelectorFromString(funcName);
-    if ([NSClassFromString(plugin) respondsToSelector:selector]) {
-        id parameter = nil;
-        if (params) {
-            parameter = params;
-        }else{
-            parameter = [JKEventHandlerEmptyObject class];
-        }
-        
-        id successBlock=nil;
-        if (successCallBack) {
-            successBlock = successCallBack;
-        }else{
-            successBlock = [JKEventHandlerEmptyObject class];
-        }
-        
-        id failureBlock=nil;
-        if (failureCallBack) {
-            failureBlock = failureCallBack;
-        }else{
-            failureBlock = [JKEventHandlerEmptyObject class];
-        }
-        NSArray *paramArray =@[parameter,successBlock,failureBlock];
-        [self class:NSClassFromString(plugin) performSelector:selector withObjects:paramArray];
+    Class realHandler = NSClassFromString(plugin);
+    if ([realHandler respondsToSelector:selector]) {
+        IMP imp = [realHandler methodForSelector:selector];
+        void (*func)(id, SEL, id, id, id) = (void *)imp;
+        func(realHandler, selector, params, successCallBack,failureCallBack);
     }else{
         if (failureCallBack) {
             NSError *error = [[NSError alloc] initWithDomain:@"JKEventHandler" code:-10000 userInfo:@{@"msg":[NSString stringWithFormat:@"%@ unsupport %@",plugin,funcName]}];
             failureCallBack(error);
         }
     }
-    
-}
-
-- (void)class:(Class)class performSelector:(SEL)aSelector withObjects:(NSArray *)objects {
-    NSMethodSignature *signature = [NSMethodSignature signatureWithObjCTypes:"v@:@@@"];
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-    [invocation setTarget:class];
-    [invocation setSelector:aSelector];
-
-    NSUInteger i = 1;
-    for (id object in objects) {
-        id tempObject = object;
-        if (![tempObject isKindOfClass:[NSObject class]]) {
-            if ([tempObject isSubclassOfClass:[JKEventHandlerEmptyObject class]]) {
-                tempObject = nil;
-            }
-        }
-        [invocation setArgument:&tempObject atIndex:++i];
-    }
-    [invocation invoke];
-    
 }
 
 - (void)_jkCallJSCallBackWithCallBackName:(NSString *)callBackName response:(id)response{

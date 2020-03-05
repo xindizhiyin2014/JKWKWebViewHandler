@@ -31,3 +31,21 @@ Carthage
 # `pod install` in .travis.yml
 #
 # Pods/
+Example/Pods/JKDataHelper/JKDataHelper/Classes/JKDataHelper.h
+Example/Pods/JKDataHelper/JKDataHelper/Classes/NSArray+JKDataHelper.h
+Example/Pods/JKDataHelper/JKDataHelper/Classes/NSArray+JKDataHelper.m
+Example/Pods/JKDataHelper/JKDataHelper/Classes/NSDictionary+JKDataHelper.h
+Example/Pods/JKDataHelper/JKDataHelper/Classes/NSDictionary+JKDataHelper.m
+Example/Pods/JKDataHelper/JKDataHelper/Classes/NSString+JKDataHelper.h
+Example/Pods/JKDataHelper/JKDataHelper/Classes/NSString+JKDataHelper.m
+Example/Pods/JKDataHelper/LICENSE
+Example/Pods/JKDataHelper/README.md
+Example/Pods/Target Support Files/JKDataHelper/JKDataHelper-Info.plist
+Example/Pods/Target Support Files/JKDataHelper/JKDataHelper-dummy.m
+Example/Pods/Target Support Files/JKDataHelper/JKDataHelper-prefix.pch
+Example/Pods/Target Support Files/JKDataHelper/JKDataHelper-umbrella.h
+Example/Pods/Target Support Files/JKDataHelper/JKDataHelper.modulemap
+Example/Pods/Target Support Files/JKDataHelper/JKDataHelper.xcconfig
+Example/Pods/Target Support Files/JKWKWebViewHandler/JKWKWebViewHandler-Info.plist
+Example/Pods/Target Support Files/Pods-JKWKWebViewHandler_Example/Pods-JKWKWebViewHandler_Example-Info.plist
+Example/Pods/Target Support Files/Pods-JKWKWebViewHandler_Tests/Pods-JKWKWebViewHandler_Tests-Info.plist

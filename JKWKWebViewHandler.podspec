@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JKWKWebViewHandler'
-  s.version          = '0.4.1'
+  s.version          = '0.4.2'
   s.summary          = 'This is a tool of WKWebivew interact with H5.'
 
 # This description is used to generate tags and improve search results.
@@ -39,5 +39,5 @@ TODO: This is a tool of WKWebivew interact with H5, it add a callback event of e
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.dependency 'JKDataHelper'
 end

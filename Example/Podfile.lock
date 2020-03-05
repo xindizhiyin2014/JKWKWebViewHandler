@@ -1,16 +1,23 @@
 PODS:
-  - JKWKWebViewHandler (0.3.0)
+  - JKDataHelper (0.1.21)
+  - JKWKWebViewHandler (0.4.1):
+    - JKDataHelper
 
 DEPENDENCIES:
   - JKWKWebViewHandler (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - JKDataHelper
 
 EXTERNAL SOURCES:
   JKWKWebViewHandler:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JKWKWebViewHandler: b1804df71e06730b0ce7243f6e60385eede58b12
+  JKDataHelper: a9b82e97b561949cfe7f64282c08e26b5c4ef580
+  JKWKWebViewHandler: bcdb32036222c79319f9894f372ca913258d43bd
 
 PODFILE CHECKSUM: f3046853509cf550cdfee8147c8c991078d478b6
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

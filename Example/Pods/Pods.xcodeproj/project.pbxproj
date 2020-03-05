@@ -7,238 +7,322 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BF1944427DABB8B0A9FAD65690B4F53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		42511521AECDC02B668900C147B9252D /* JKEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 2959BDFBDCAEBDBFF36329D2E31A7755 /* JKEventHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		428A9E353AACACA80F3E3FB321C675C3 /* JKWKWebViewHandler-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D70371B6910CBB611E11965D6390A7E /* JKWKWebViewHandler-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4AAE8BCAC121E182C8915A98247614B8 /* JKEventHandler.js in Resources */ = {isa = PBXBuildFile; fileRef = 9BE8202DF4D6EA7CADF3FD863F1952DA /* JKEventHandler.js */; };
-		8C35EA29080AFE8C12F202045C40A517 /* Pods-JKWKWebViewHandler_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3326BCA4B4068826F011482505EAAB54 /* Pods-JKWKWebViewHandler_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E11BE301CB2E19671F0D035870768D8 /* Pods-JKWKWebViewHandler_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A17B8B7A0DEA36B8BFB950CDC2BA4BAB /* Pods-JKWKWebViewHandler_Example-dummy.m */; };
-		989CB9369F061A8F5772A1C3A2414928 /* JKWKWebViewHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 838095B52A2093DC303355F211BF246B /* JKWKWebViewHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ADFBA27D486D80D320303D2B49908D42 /* Pods-JKWKWebViewHandler_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA5FAD4277AB086A293FFCF6CA4C95D /* Pods-JKWKWebViewHandler_Tests-dummy.m */; };
-		B730796B8D4A0E9AEAF0B55C010E4F12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		BC24771827ECAF515F3799E84D30B296 /* Pods-JKWKWebViewHandler_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B9BDCBCA6D7A81141CCFAA8F2865C4E /* Pods-JKWKWebViewHandler_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C1520020C98579FE8BC5E704A1CCA8A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		C93417161AE8842082528CF942280103 /* JKEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 997D0173F97C619544E4C3A23FAAB03A /* JKEventHandler.m */; };
-		FFC41BB34FAEAF5060334D0179EE86FA /* JKWKWebViewHandler-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5B14279FBF92BAE1A65B012A6819EB /* JKWKWebViewHandler-dummy.m */; };
+		02D81AE06C0CC6DA3FEC05B446CE0589 /* JKDataHelper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 567D82D34F1E6C4219D7B951A5EBD6C2 /* JKDataHelper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0881EDF00878A56FA7626A4546E5CC2B /* NSArray+JKDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA98B286FDB97939322AF63F1135FB5D /* NSArray+JKDataHelper.m */; };
+		194D482D3AABD6196028EFC13EE5F5F7 /* JKDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C8B0A9B18D0EDA34C5CBCC21B81C59 /* JKDataHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29275B39036EEF28DF6054E1D3A2705D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FFAD8A389ADDF9A225A024D62E5491 /* Foundation.framework */; };
+		3EA8A23194A9FAC134B29A0D985A30E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FFAD8A389ADDF9A225A024D62E5491 /* Foundation.framework */; };
+		4524FFEDA89F71D69955A0CF6579B64D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FFAD8A389ADDF9A225A024D62E5491 /* Foundation.framework */; };
+		490267FC72E990FD1C1EB399AA1441E0 /* JKWKWebViewHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 020D2687CC9D91C7A3798692404D05E5 /* JKWKWebViewHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5794721918DA1B9A6000FF335150886A /* JKEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = DDE93C50C26C12396AA154B91369F987 /* JKEventHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57E5F698BBD3CA71C838C96D4427509B /* Pods-JKWKWebViewHandler_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E91366FB98E16406AD2786B5B97C4320 /* Pods-JKWKWebViewHandler_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		768C16CDD6C3D754C0BB23C907E82D3B /* NSDictionary+JKDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FAC601777868BB149D15F9589DD78A7 /* NSDictionary+JKDataHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C9C21DD8A80B06BA2C27B51681918E5 /* Pods-JKWKWebViewHandler_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DFC1BB96A885DC967C42A4ECDC36B2A /* Pods-JKWKWebViewHandler_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E4368B67E5E4E1B943056C6AC1D971C /* JKDataHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F395C215111B90763D80732924B4295 /* JKDataHelper.framework */; };
+		8AC5795EAC59AB2EEFBA513D7946210D /* JKEventHandler.js in Resources */ = {isa = PBXBuildFile; fileRef = 72E100F6DE57DD45F830F8F627425988 /* JKEventHandler.js */; };
+		8B598A5AC6F7A4359D3DC3F1573E337B /* JKWKWebViewHandler-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DF4CA683B1F9CF099B173C0248B82B55 /* JKWKWebViewHandler-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C5391FB4D234F8CAFE3E59C0A520DD2 /* JKDataHelper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE202A6D7E8B8F795902C3A46991DC /* JKDataHelper-dummy.m */; };
+		92FDB78D2FA92772DB146308C75F7168 /* NSString+JKDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 673E138A93EBA394A22CF118D2E12CDA /* NSString+JKDataHelper.m */; };
+		AF00EF7F6CD176A69DE9CFC3CB4B0CD7 /* Pods-JKWKWebViewHandler_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 681003ECCEF39C4FB95FFA864FC62F90 /* Pods-JKWKWebViewHandler_Example-dummy.m */; };
+		B0FEE0401FE6BBD4B274930BB30E27FF /* JKWKWebViewHandler-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 801FEBB1C335D08A566D0FD75FE550F1 /* JKWKWebViewHandler-dummy.m */; };
+		C25B7A35BEF96C080DBDBF68FFBD3CA9 /* NSDictionary+JKDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 55ADF2693F9C7637350B7FD6B1C4B03B /* NSDictionary+JKDataHelper.m */; };
+		CFFD800C040497BB010B06ECB2B717D5 /* JKEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5FBB346C43BF46AB460165A968D800 /* JKEventHandler.m */; };
+		D0C81E3A50180CF44C8A9C6BADBD8098 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FFAD8A389ADDF9A225A024D62E5491 /* Foundation.framework */; };
+		D5F294B1F846B6A1E8F74627F35FC993 /* Pods-JKWKWebViewHandler_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EBF3C47C48B0E277B20F9A74F08516 /* Pods-JKWKWebViewHandler_Tests-dummy.m */; };
+		E5D6D293A2134200E3A2FA8B271F5482 /* NSString+JKDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E46829CA61CB68DE1C20489906D1DC60 /* NSString+JKDataHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F27AC6E0C673ADECE8A5736EF3E41A25 /* NSArray+JKDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E900252268995403512796D6A26FDC8 /* NSArray+JKDataHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		819383FD56A0C0ED7550FC04FF3AAC81 /* PBXContainerItemProxy */ = {
+		0909DF0180620D7DAD380A92010C0031 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7FBEC20F7668DE2E6B72C10806EC0921;
+			remoteGlobalIDString = C39ADDDA7893545387B1E244A18FCDE7;
+			remoteInfo = JKDataHelper;
+		};
+		25EA58D3D6A97CBDD8A8114A073D7552 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07C2B49B23F95043C8C138F43AD394ED;
 			remoteInfo = JKWKWebViewHandler;
 		};
-		9EE9F5E1E32EEAE6B1139D9AAB3FC0D1 /* PBXContainerItemProxy */ = {
+		8D8C9B15F7F9B4F6366B9774308E4CE9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2DA537E3F5F7C965EA010586310E74A;
+			remoteGlobalIDString = F9F9DFA2308725B439D9A54775DE540D;
 			remoteInfo = "Pods-JKWKWebViewHandler_Example";
+		};
+		AF5B3767D85A21AAD56D5D1BAAE4C3D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C39ADDDA7893545387B1E244A18FCDE7;
+			remoteInfo = JKDataHelper;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08B92BC92F30B303D320940A97F62776 /* JKWKWebViewHandler.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = JKWKWebViewHandler.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		096F32D32B2835FE9CFED46F871AF7C5 /* Pods-JKWKWebViewHandler_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JKWKWebViewHandler_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		0F366C19475D26CF0D8DC697FCF71F97 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0F6C61A6815B5BE5B27D574992D96164 /* Pods-JKWKWebViewHandler_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JKWKWebViewHandler_Example-frameworks.sh"; sourceTree = "<group>"; };
-		107DBA54E08F520EB8961815E96E76DE /* Pods-JKWKWebViewHandler_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JKWKWebViewHandler_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		20676298361928FD70EB361F55EE88D1 /* Pods-JKWKWebViewHandler_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JKWKWebViewHandler_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2959BDFBDCAEBDBFF36329D2E31A7755 /* JKEventHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JKEventHandler.h; path = JKWKWebViewHandler/Classes/JKEventHandler.h; sourceTree = "<group>"; };
-		3064986C744FDDB32E428351EF8B1619 /* Pods_JKWKWebViewHandler_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JKWKWebViewHandler_Tests.framework; path = "Pods-JKWKWebViewHandler_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3326BCA4B4068826F011482505EAAB54 /* Pods-JKWKWebViewHandler_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JKWKWebViewHandler_Example-umbrella.h"; sourceTree = "<group>"; };
-		39FC0C91B52371EDA6923CEE03E0FE3C /* Pods-JKWKWebViewHandler_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JKWKWebViewHandler_Example.modulemap"; sourceTree = "<group>"; };
-		3A27A7101BBEB5276D946994B1CBAF54 /* Pods-JKWKWebViewHandler_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JKWKWebViewHandler_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		42C141A0A2D0295F5D84BA3E9A1965A3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		5B9BDCBCA6D7A81141CCFAA8F2865C4E /* Pods-JKWKWebViewHandler_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JKWKWebViewHandler_Tests-umbrella.h"; sourceTree = "<group>"; };
-		65548A3F04C3999665D85AF03050E81A /* Pods-JKWKWebViewHandler_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JKWKWebViewHandler_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7D70371B6910CBB611E11965D6390A7E /* JKWKWebViewHandler-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JKWKWebViewHandler-umbrella.h"; sourceTree = "<group>"; };
-		838095B52A2093DC303355F211BF246B /* JKWKWebViewHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JKWKWebViewHandler.h; path = JKWKWebViewHandler/Classes/JKWKWebViewHandler.h; sourceTree = "<group>"; };
-		8A1FA38A9566D5AE46EBE80275E2F347 /* Pods-JKWKWebViewHandler_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JKWKWebViewHandler_Tests.modulemap"; sourceTree = "<group>"; };
-		8E475E45069D19233FE4D5C69FFD9969 /* Pods-JKWKWebViewHandler_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JKWKWebViewHandler_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		997D0173F97C619544E4C3A23FAAB03A /* JKEventHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JKEventHandler.m; path = JKWKWebViewHandler/Classes/JKEventHandler.m; sourceTree = "<group>"; };
-		9BE8202DF4D6EA7CADF3FD863F1952DA /* JKEventHandler.js */ = {isa = PBXFileReference; includeInIndex = 1; name = JKEventHandler.js; path = JKWKWebViewHandler/Resources/JKEventHandler.js; sourceTree = "<group>"; };
-		A00AD1CD0BF3064770945CDCD35909A8 /* JKWKWebViewHandler.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JKWKWebViewHandler.xcconfig; sourceTree = "<group>"; };
-		A17B8B7A0DEA36B8BFB950CDC2BA4BAB /* Pods-JKWKWebViewHandler_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JKWKWebViewHandler_Example-dummy.m"; sourceTree = "<group>"; };
-		A222C41D6AC8521133BBA51C05892301 /* Pods_JKWKWebViewHandler_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JKWKWebViewHandler_Example.framework; path = "Pods-JKWKWebViewHandler_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2F635358343E938A8CAD13F32805C62 /* Pods-JKWKWebViewHandler_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JKWKWebViewHandler_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A5E943CBEC71451A8F1CA79EA5D95A61 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B71FDAC724DE841B8B60E50CC51E3C29 /* Pods-JKWKWebViewHandler_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JKWKWebViewHandler_Example.release.xcconfig"; sourceTree = "<group>"; };
-		BFB831C362493441D7FD14813C123407 /* JKWKWebViewHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JKWKWebViewHandler.framework; path = JKWKWebViewHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2B82D22F2A109847A3B56777D1E00D6 /* Pods-JKWKWebViewHandler_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JKWKWebViewHandler_Tests-resources.sh"; sourceTree = "<group>"; };
-		CA5B14279FBF92BAE1A65B012A6819EB /* JKWKWebViewHandler-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JKWKWebViewHandler-dummy.m"; sourceTree = "<group>"; };
-		DCB22CFDCD218AF218D00B2DBE0F24BF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		DDF341E234397BED59C0FDEDB21DC936 /* Pods-JKWKWebViewHandler_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JKWKWebViewHandler_Example-resources.sh"; sourceTree = "<group>"; };
-		E94260C9130C554FB83162194603C9AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EEA5FAD4277AB086A293FFCF6CA4C95D /* Pods-JKWKWebViewHandler_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JKWKWebViewHandler_Tests-dummy.m"; sourceTree = "<group>"; };
-		F00C0B37E0E3D5881156DA5437D29C54 /* JKWKWebViewHandler.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JKWKWebViewHandler.modulemap; sourceTree = "<group>"; };
-		F1BA666A5A4383FB4FC0D25287A703AA /* JKWKWebViewHandler-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JKWKWebViewHandler-prefix.pch"; sourceTree = "<group>"; };
-		FCC8804FEB88F94D3A2861C966357EA5 /* Pods-JKWKWebViewHandler_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JKWKWebViewHandler_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		02028ECC39A33E0D0C0A719EE7ADBF32 /* Pods-JKWKWebViewHandler_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JKWKWebViewHandler_Tests.modulemap"; sourceTree = "<group>"; };
+		0203A77D57B4C2EEAFD59EE22699BCF7 /* Pods-JKWKWebViewHandler_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JKWKWebViewHandler_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		020D2687CC9D91C7A3798692404D05E5 /* JKWKWebViewHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JKWKWebViewHandler.h; path = JKWKWebViewHandler/Classes/JKWKWebViewHandler.h; sourceTree = "<group>"; };
+		032AF88FA07DA07B501B85F7D3E82177 /* JKWKWebViewHandler.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JKWKWebViewHandler.modulemap; sourceTree = "<group>"; };
+		0BD942E5BA9105C023B3CF73FC37E634 /* Pods-JKWKWebViewHandler_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JKWKWebViewHandler_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		15DE202A6D7E8B8F795902C3A46991DC /* JKDataHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JKDataHelper-dummy.m"; sourceTree = "<group>"; };
+		170A6EE0BC11AD2EB71294556B526310 /* Pods_JKWKWebViewHandler_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JKWKWebViewHandler_Example.framework; path = "Pods-JKWKWebViewHandler_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1827D9DE386E254D6944357BAB43ED9C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		1898FD2580A016FAF57FFDD58F219891 /* JKWKWebViewHandler.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = JKWKWebViewHandler.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1E900252268995403512796D6A26FDC8 /* NSArray+JKDataHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+JKDataHelper.h"; path = "JKDataHelper/Classes/NSArray+JKDataHelper.h"; sourceTree = "<group>"; };
+		220FC469BE0FF1BB1DE588E1F88C566D /* Pods-JKWKWebViewHandler_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JKWKWebViewHandler_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2A9F43E015FF53763AB42F632E7FCA30 /* JKDataHelper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JKDataHelper-Info.plist"; sourceTree = "<group>"; };
+		32C8B0A9B18D0EDA34C5CBCC21B81C59 /* JKDataHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JKDataHelper.h; path = JKDataHelper/Classes/JKDataHelper.h; sourceTree = "<group>"; };
+		3D13F4A372ADAD5C8FDD030EF80F011C /* Pods-JKWKWebViewHandler_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JKWKWebViewHandler_Example-Info.plist"; sourceTree = "<group>"; };
+		44425FCCE61DA733FE06917F47A11DC6 /* JKDataHelper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JKDataHelper.modulemap; sourceTree = "<group>"; };
+		55ADF2693F9C7637350B7FD6B1C4B03B /* NSDictionary+JKDataHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+JKDataHelper.m"; path = "JKDataHelper/Classes/NSDictionary+JKDataHelper.m"; sourceTree = "<group>"; };
+		567D82D34F1E6C4219D7B951A5EBD6C2 /* JKDataHelper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JKDataHelper-umbrella.h"; sourceTree = "<group>"; };
+		5843909429E5E274A00DCDD35AC28591 /* Pods-JKWKWebViewHandler_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JKWKWebViewHandler_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		5E4F27F43625F5C6498AE4B504598A08 /* Pods_JKWKWebViewHandler_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JKWKWebViewHandler_Tests.framework; path = "Pods-JKWKWebViewHandler_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F395C215111B90763D80732924B4295 /* JKDataHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JKDataHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		661D8EA9DC2F9CBC53209DEDE44E9DD3 /* JKDataHelper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JKDataHelper.xcconfig; sourceTree = "<group>"; };
+		673E138A93EBA394A22CF118D2E12CDA /* NSString+JKDataHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+JKDataHelper.m"; path = "JKDataHelper/Classes/NSString+JKDataHelper.m"; sourceTree = "<group>"; };
+		67EBF3C47C48B0E277B20F9A74F08516 /* Pods-JKWKWebViewHandler_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JKWKWebViewHandler_Tests-dummy.m"; sourceTree = "<group>"; };
+		681003ECCEF39C4FB95FFA864FC62F90 /* Pods-JKWKWebViewHandler_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JKWKWebViewHandler_Example-dummy.m"; sourceTree = "<group>"; };
+		72E100F6DE57DD45F830F8F627425988 /* JKEventHandler.js */ = {isa = PBXFileReference; includeInIndex = 1; name = JKEventHandler.js; path = JKWKWebViewHandler/Resources/JKEventHandler.js; sourceTree = "<group>"; };
+		771584FBA4A3F0083EF71BCFC045F78A /* JKWKWebViewHandler-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JKWKWebViewHandler-prefix.pch"; sourceTree = "<group>"; };
+		78FFAD8A389ADDF9A225A024D62E5491 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7FAC601777868BB149D15F9589DD78A7 /* NSDictionary+JKDataHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+JKDataHelper.h"; path = "JKDataHelper/Classes/NSDictionary+JKDataHelper.h"; sourceTree = "<group>"; };
+		801FEBB1C335D08A566D0FD75FE550F1 /* JKWKWebViewHandler-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JKWKWebViewHandler-dummy.m"; sourceTree = "<group>"; };
+		8D2D4207517D98A15685F2D7BB117AE9 /* JKDataHelper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JKDataHelper-prefix.pch"; sourceTree = "<group>"; };
+		96F16A1FB45EBA9755A0BC3DB44DAF4D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9A130AD5F39A7EB52F6BAE2D5F2ED54B /* JKWKWebViewHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JKWKWebViewHandler.framework; path = JKWKWebViewHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF43F9E694C7785584675135BE56DBD /* JKWKWebViewHandler.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JKWKWebViewHandler.xcconfig; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DFC1BB96A885DC967C42A4ECDC36B2A /* Pods-JKWKWebViewHandler_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JKWKWebViewHandler_Example-umbrella.h"; sourceTree = "<group>"; };
+		9E5FBB346C43BF46AB460165A968D800 /* JKEventHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JKEventHandler.m; path = JKWKWebViewHandler/Classes/JKEventHandler.m; sourceTree = "<group>"; };
+		A5A78A94591ADE847821E00F102C2521 /* Pods-JKWKWebViewHandler_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JKWKWebViewHandler_Tests-Info.plist"; sourceTree = "<group>"; };
+		B3E475DA47F32A9640A86249A4B602E6 /* JKWKWebViewHandler-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JKWKWebViewHandler-Info.plist"; sourceTree = "<group>"; };
+		C7501924B6D499D83418EB09C989926B /* Pods-JKWKWebViewHandler_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JKWKWebViewHandler_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D139282A8B5BF958B3DBA8CEF1278561 /* Pods-JKWKWebViewHandler_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JKWKWebViewHandler_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D727F803F6734D8B4517A3E7A9609878 /* Pods-JKWKWebViewHandler_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JKWKWebViewHandler_Example.modulemap"; sourceTree = "<group>"; };
+		DC4B9F19752BA9FCDDAFE40DA704C73D /* Pods-JKWKWebViewHandler_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JKWKWebViewHandler_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		DDE93C50C26C12396AA154B91369F987 /* JKEventHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JKEventHandler.h; path = JKWKWebViewHandler/Classes/JKEventHandler.h; sourceTree = "<group>"; };
+		DF4CA683B1F9CF099B173C0248B82B55 /* JKWKWebViewHandler-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JKWKWebViewHandler-umbrella.h"; sourceTree = "<group>"; };
+		E46829CA61CB68DE1C20489906D1DC60 /* NSString+JKDataHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+JKDataHelper.h"; path = "JKDataHelper/Classes/NSString+JKDataHelper.h"; sourceTree = "<group>"; };
+		E91366FB98E16406AD2786B5B97C4320 /* Pods-JKWKWebViewHandler_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JKWKWebViewHandler_Tests-umbrella.h"; sourceTree = "<group>"; };
+		F399D7AF3F292CAFB9F44ED57E097E1F /* Pods-JKWKWebViewHandler_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JKWKWebViewHandler_Example-frameworks.sh"; sourceTree = "<group>"; };
+		F6C0EF9E5C75364F45A5CABFD3AC4116 /* JKDataHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JKDataHelper.framework; path = JKDataHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E6F832BDD2E67658672A8D4E1BE23C /* Pods-JKWKWebViewHandler_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JKWKWebViewHandler_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FA98B286FDB97939322AF63F1135FB5D /* NSArray+JKDataHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+JKDataHelper.m"; path = "JKDataHelper/Classes/NSArray+JKDataHelper.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1375441116D90FD69A8D52EC30BFDFE3 /* Frameworks */ = {
+		225C38885289961E487FF00F775D0DEC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B730796B8D4A0E9AEAF0B55C010E4F12 /* Foundation.framework in Frameworks */,
+				29275B39036EEF28DF6054E1D3A2705D /* Foundation.framework in Frameworks */,
+				7E4368B67E5E4E1B943056C6AC1D971C /* JKDataHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8E65C3119DAC0EA318FFF2609B0AE840 /* Frameworks */ = {
+		C805D0F80E460DD0949C79D25C804C45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BF1944427DABB8B0A9FAD65690B4F53 /* Foundation.framework in Frameworks */,
+				D0C81E3A50180CF44C8A9C6BADBD8098 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ECBE7C046A5AC8D2ABA8E06D37428EAD /* Frameworks */ = {
+		D55FCFD26D107BEEE4D03B2CCED299EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1520020C98579FE8BC5E704A1CCA8A9 /* Foundation.framework in Frameworks */,
+				3EA8A23194A9FAC134B29A0D985A30E8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F18B258EE53008DE8AB2E6093C7397AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4524FFEDA89F71D69955A0CF6579B64D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04AA5F03A3C34BF402582572E7C9D1B7 /* Support Files */ = {
+		08729D24776D068FB5211E72289AF653 /* JKDataHelper */ = {
 			isa = PBXGroup;
 			children = (
-				0F366C19475D26CF0D8DC697FCF71F97 /* Info.plist */,
-				F00C0B37E0E3D5881156DA5437D29C54 /* JKWKWebViewHandler.modulemap */,
-				A00AD1CD0BF3064770945CDCD35909A8 /* JKWKWebViewHandler.xcconfig */,
-				CA5B14279FBF92BAE1A65B012A6819EB /* JKWKWebViewHandler-dummy.m */,
-				F1BA666A5A4383FB4FC0D25287A703AA /* JKWKWebViewHandler-prefix.pch */,
-				7D70371B6910CBB611E11965D6390A7E /* JKWKWebViewHandler-umbrella.h */,
+				32C8B0A9B18D0EDA34C5CBCC21B81C59 /* JKDataHelper.h */,
+				1E900252268995403512796D6A26FDC8 /* NSArray+JKDataHelper.h */,
+				FA98B286FDB97939322AF63F1135FB5D /* NSArray+JKDataHelper.m */,
+				7FAC601777868BB149D15F9589DD78A7 /* NSDictionary+JKDataHelper.h */,
+				55ADF2693F9C7637350B7FD6B1C4B03B /* NSDictionary+JKDataHelper.m */,
+				E46829CA61CB68DE1C20489906D1DC60 /* NSString+JKDataHelper.h */,
+				673E138A93EBA394A22CF118D2E12CDA /* NSString+JKDataHelper.m */,
+				CE9E93219C6DBF31ABCA78E29535EFC9 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/JKWKWebViewHandler";
+			name = JKDataHelper;
+			path = JKDataHelper;
 			sourceTree = "<group>";
 		};
-		15AE6FF942F0D1E4A6ADA1D059713095 /* Pod */ = {
+		0992FE0A2985984435F945403E6E70AD /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				08B92BC92F30B303D320940A97F62776 /* JKWKWebViewHandler.podspec */,
-				42C141A0A2D0295F5D84BA3E9A1965A3 /* LICENSE */,
-				DCB22CFDCD218AF218D00B2DBE0F24BF /* README.md */,
+				1898FD2580A016FAF57FFDD58F219891 /* JKWKWebViewHandler.podspec */,
+				1827D9DE386E254D6944357BAB43ED9C /* LICENSE */,
+				96F16A1FB45EBA9755A0BC3DB44DAF4D /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		220D07D7EBEF0247FA40732F09B6F245 /* Development Pods */ = {
+		1561402601B1436D5D66DCDA58EC509B /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F5B4C43AF3B7595D3A488E8825E2E5C0 /* JKWKWebViewHandler */,
+				1B2D6DBC809CACFB60F773BAC9F691F2 /* Pods-JKWKWebViewHandler_Example */,
+				8C3EB46C97678DF69BE89E0849B6FEB9 /* Pods-JKWKWebViewHandler_Tests */,
 			);
-			name = "Development Pods";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		35881C87AB282355B92140ADD067DE78 /* Products */ = {
+		1B2D6DBC809CACFB60F773BAC9F691F2 /* Pods-JKWKWebViewHandler_Example */ = {
 			isa = PBXGroup;
 			children = (
-				BFB831C362493441D7FD14813C123407 /* JKWKWebViewHandler.framework */,
-				A222C41D6AC8521133BBA51C05892301 /* Pods_JKWKWebViewHandler_Example.framework */,
-				3064986C744FDDB32E428351EF8B1619 /* Pods_JKWKWebViewHandler_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		446ADACA7167613450A88832CB54BA4B /* Pods-JKWKWebViewHandler_Example */ = {
-			isa = PBXGroup;
-			children = (
-				A5E943CBEC71451A8F1CA79EA5D95A61 /* Info.plist */,
-				39FC0C91B52371EDA6923CEE03E0FE3C /* Pods-JKWKWebViewHandler_Example.modulemap */,
-				8E475E45069D19233FE4D5C69FFD9969 /* Pods-JKWKWebViewHandler_Example-acknowledgements.markdown */,
-				096F32D32B2835FE9CFED46F871AF7C5 /* Pods-JKWKWebViewHandler_Example-acknowledgements.plist */,
-				A17B8B7A0DEA36B8BFB950CDC2BA4BAB /* Pods-JKWKWebViewHandler_Example-dummy.m */,
-				0F6C61A6815B5BE5B27D574992D96164 /* Pods-JKWKWebViewHandler_Example-frameworks.sh */,
-				DDF341E234397BED59C0FDEDB21DC936 /* Pods-JKWKWebViewHandler_Example-resources.sh */,
-				3326BCA4B4068826F011482505EAAB54 /* Pods-JKWKWebViewHandler_Example-umbrella.h */,
-				A2F635358343E938A8CAD13F32805C62 /* Pods-JKWKWebViewHandler_Example.debug.xcconfig */,
-				B71FDAC724DE841B8B60E50CC51E3C29 /* Pods-JKWKWebViewHandler_Example.release.xcconfig */,
+				D727F803F6734D8B4517A3E7A9609878 /* Pods-JKWKWebViewHandler_Example.modulemap */,
+				F6E6F832BDD2E67658672A8D4E1BE23C /* Pods-JKWKWebViewHandler_Example-acknowledgements.markdown */,
+				DC4B9F19752BA9FCDDAFE40DA704C73D /* Pods-JKWKWebViewHandler_Example-acknowledgements.plist */,
+				681003ECCEF39C4FB95FFA864FC62F90 /* Pods-JKWKWebViewHandler_Example-dummy.m */,
+				F399D7AF3F292CAFB9F44ED57E097E1F /* Pods-JKWKWebViewHandler_Example-frameworks.sh */,
+				3D13F4A372ADAD5C8FDD030EF80F011C /* Pods-JKWKWebViewHandler_Example-Info.plist */,
+				9DFC1BB96A885DC967C42A4ECDC36B2A /* Pods-JKWKWebViewHandler_Example-umbrella.h */,
+				0BD942E5BA9105C023B3CF73FC37E634 /* Pods-JKWKWebViewHandler_Example.debug.xcconfig */,
+				C7501924B6D499D83418EB09C989926B /* Pods-JKWKWebViewHandler_Example.release.xcconfig */,
 			);
 			name = "Pods-JKWKWebViewHandler_Example";
 			path = "Target Support Files/Pods-JKWKWebViewHandler_Example";
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		259984C463023A582F5537ECE860EC4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				220D07D7EBEF0247FA40732F09B6F245 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				35881C87AB282355B92140ADD067DE78 /* Products */,
-				A39379FA8B97DD3CFE762898168E98C8 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		98ED7BD3ECE67F71DAF515C45AB39C05 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				9BE8202DF4D6EA7CADF3FD863F1952DA /* JKEventHandler.js */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		A39379FA8B97DD3CFE762898168E98C8 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				446ADACA7167613450A88832CB54BA4B /* Pods-JKWKWebViewHandler_Example */,
-				EA8787138C08598955763581528D1A92 /* Pods-JKWKWebViewHandler_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				5F395C215111B90763D80732924B4295 /* JKDataHelper.framework */,
+				3DC207EAB52F1B691FBBA7A409751314 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		335908701550173FEADEE3FAE8AFA304 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				08729D24776D068FB5211E72289AF653 /* JKDataHelper */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3DC207EAB52F1B691FBBA7A409751314 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				78FFAD8A389ADDF9A225A024D62E5491 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		EA8787138C08598955763581528D1A92 /* Pods-JKWKWebViewHandler_Tests */ = {
+		8C3EB46C97678DF69BE89E0849B6FEB9 /* Pods-JKWKWebViewHandler_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				E94260C9130C554FB83162194603C9AF /* Info.plist */,
-				8A1FA38A9566D5AE46EBE80275E2F347 /* Pods-JKWKWebViewHandler_Tests.modulemap */,
-				107DBA54E08F520EB8961815E96E76DE /* Pods-JKWKWebViewHandler_Tests-acknowledgements.markdown */,
-				3A27A7101BBEB5276D946994B1CBAF54 /* Pods-JKWKWebViewHandler_Tests-acknowledgements.plist */,
-				EEA5FAD4277AB086A293FFCF6CA4C95D /* Pods-JKWKWebViewHandler_Tests-dummy.m */,
-				FCC8804FEB88F94D3A2861C966357EA5 /* Pods-JKWKWebViewHandler_Tests-frameworks.sh */,
-				C2B82D22F2A109847A3B56777D1E00D6 /* Pods-JKWKWebViewHandler_Tests-resources.sh */,
-				5B9BDCBCA6D7A81141CCFAA8F2865C4E /* Pods-JKWKWebViewHandler_Tests-umbrella.h */,
-				20676298361928FD70EB361F55EE88D1 /* Pods-JKWKWebViewHandler_Tests.debug.xcconfig */,
-				65548A3F04C3999665D85AF03050E81A /* Pods-JKWKWebViewHandler_Tests.release.xcconfig */,
+				02028ECC39A33E0D0C0A719EE7ADBF32 /* Pods-JKWKWebViewHandler_Tests.modulemap */,
+				D139282A8B5BF958B3DBA8CEF1278561 /* Pods-JKWKWebViewHandler_Tests-acknowledgements.markdown */,
+				0203A77D57B4C2EEAFD59EE22699BCF7 /* Pods-JKWKWebViewHandler_Tests-acknowledgements.plist */,
+				67EBF3C47C48B0E277B20F9A74F08516 /* Pods-JKWKWebViewHandler_Tests-dummy.m */,
+				A5A78A94591ADE847821E00F102C2521 /* Pods-JKWKWebViewHandler_Tests-Info.plist */,
+				E91366FB98E16406AD2786B5B97C4320 /* Pods-JKWKWebViewHandler_Tests-umbrella.h */,
+				5843909429E5E274A00DCDD35AC28591 /* Pods-JKWKWebViewHandler_Tests.debug.xcconfig */,
+				220FC469BE0FF1BB1DE588E1F88C566D /* Pods-JKWKWebViewHandler_Tests.release.xcconfig */,
 			);
 			name = "Pods-JKWKWebViewHandler_Tests";
 			path = "Target Support Files/Pods-JKWKWebViewHandler_Tests";
 			sourceTree = "<group>";
 		};
-		F5B4C43AF3B7595D3A488E8825E2E5C0 /* JKWKWebViewHandler */ = {
+		90F94E90B52F3DD0AF903B39203EDAEF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2959BDFBDCAEBDBFF36329D2E31A7755 /* JKEventHandler.h */,
-				997D0173F97C619544E4C3A23FAAB03A /* JKEventHandler.m */,
-				838095B52A2093DC303355F211BF246B /* JKWKWebViewHandler.h */,
-				15AE6FF942F0D1E4A6ADA1D059713095 /* Pod */,
-				98ED7BD3ECE67F71DAF515C45AB39C05 /* Resources */,
-				04AA5F03A3C34BF402582572E7C9D1B7 /* Support Files */,
+				F6C0EF9E5C75364F45A5CABFD3AC4116 /* JKDataHelper.framework */,
+				9A130AD5F39A7EB52F6BAE2D5F2ED54B /* JKWKWebViewHandler.framework */,
+				170A6EE0BC11AD2EB71294556B526310 /* Pods_JKWKWebViewHandler_Example.framework */,
+				5E4F27F43625F5C6498AE4B504598A08 /* Pods_JKWKWebViewHandler_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE82F71DA59C8C59C0C6AB2B495DD31F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				72E100F6DE57DD45F830F8F627425988 /* JKEventHandler.js */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B535E3BC60FBE2FF47D94F418FEE8D70 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				032AF88FA07DA07B501B85F7D3E82177 /* JKWKWebViewHandler.modulemap */,
+				9CF43F9E694C7785584675135BE56DBD /* JKWKWebViewHandler.xcconfig */,
+				801FEBB1C335D08A566D0FD75FE550F1 /* JKWKWebViewHandler-dummy.m */,
+				B3E475DA47F32A9640A86249A4B602E6 /* JKWKWebViewHandler-Info.plist */,
+				771584FBA4A3F0083EF71BCFC045F78A /* JKWKWebViewHandler-prefix.pch */,
+				DF4CA683B1F9CF099B173C0248B82B55 /* JKWKWebViewHandler-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/JKWKWebViewHandler";
+			sourceTree = "<group>";
+		};
+		CE9E93219C6DBF31ABCA78E29535EFC9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				44425FCCE61DA733FE06917F47A11DC6 /* JKDataHelper.modulemap */,
+				661D8EA9DC2F9CBC53209DEDE44E9DD3 /* JKDataHelper.xcconfig */,
+				15DE202A6D7E8B8F795902C3A46991DC /* JKDataHelper-dummy.m */,
+				2A9F43E015FF53763AB42F632E7FCA30 /* JKDataHelper-Info.plist */,
+				8D2D4207517D98A15685F2D7BB117AE9 /* JKDataHelper-prefix.pch */,
+				567D82D34F1E6C4219D7B951A5EBD6C2 /* JKDataHelper-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JKDataHelper";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D33BBCADDD70F8970EE66B53986965C0 /* Development Pods */,
+				259984C463023A582F5537ECE860EC4A /* Frameworks */,
+				335908701550173FEADEE3FAE8AFA304 /* Pods */,
+				90F94E90B52F3DD0AF903B39203EDAEF /* Products */,
+				1561402601B1436D5D66DCDA58EC509B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D33BBCADDD70F8970EE66B53986965C0 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA26A3B0DFEF1F8B5F418EA0F1871548 /* JKWKWebViewHandler */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		FA26A3B0DFEF1F8B5F418EA0F1871548 /* JKWKWebViewHandler */ = {
+			isa = PBXGroup;
+			children = (
+				DDE93C50C26C12396AA154B91369F987 /* JKEventHandler.h */,
+				9E5FBB346C43BF46AB460165A968D800 /* JKEventHandler.m */,
+				020D2687CC9D91C7A3798692404D05E5 /* JKWKWebViewHandler.h */,
+				0992FE0A2985984435F945403E6E70AD /* Pod */,
+				AE82F71DA59C8C59C0C6AB2B495DD31F /* Resources */,
+				B535E3BC60FBE2FF47D94F418FEE8D70 /* Support Files */,
 			);
 			name = JKWKWebViewHandler;
 			path = ../..;
@@ -247,175 +331,285 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2A1B2693AA5BE6B7E9E1A79FD159AB04 /* Headers */ = {
+		4956A7627BABA303A743A6624D03C924 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC24771827ECAF515F3799E84D30B296 /* Pods-JKWKWebViewHandler_Tests-umbrella.h in Headers */,
+				02D81AE06C0CC6DA3FEC05B446CE0589 /* JKDataHelper-umbrella.h in Headers */,
+				194D482D3AABD6196028EFC13EE5F5F7 /* JKDataHelper.h in Headers */,
+				F27AC6E0C673ADECE8A5736EF3E41A25 /* NSArray+JKDataHelper.h in Headers */,
+				768C16CDD6C3D754C0BB23C907E82D3B /* NSDictionary+JKDataHelper.h in Headers */,
+				E5D6D293A2134200E3A2FA8B271F5482 /* NSString+JKDataHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		777C0BE7C50172B2E11CBA5875680D7D /* Headers */ = {
+		880CB471FBEA198AD078C11E1BD4880B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42511521AECDC02B668900C147B9252D /* JKEventHandler.h in Headers */,
-				428A9E353AACACA80F3E3FB321C675C3 /* JKWKWebViewHandler-umbrella.h in Headers */,
-				989CB9369F061A8F5772A1C3A2414928 /* JKWKWebViewHandler.h in Headers */,
+				57E5F698BBD3CA71C838C96D4427509B /* Pods-JKWKWebViewHandler_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7EC317905A894F80019629BFDEDB0FA4 /* Headers */ = {
+		BB5A55C77377DF0D5352BEA89A51E719 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C35EA29080AFE8C12F202045C40A517 /* Pods-JKWKWebViewHandler_Example-umbrella.h in Headers */,
+				7C9C21DD8A80B06BA2C27B51681918E5 /* Pods-JKWKWebViewHandler_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE9DD7077296828CBD66F2494C4BA970 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5794721918DA1B9A6000FF335150886A /* JKEventHandler.h in Headers */,
+				8B598A5AC6F7A4359D3DC3F1573E337B /* JKWKWebViewHandler-umbrella.h in Headers */,
+				490267FC72E990FD1C1EB399AA1441E0 /* JKWKWebViewHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7FBEC20F7668DE2E6B72C10806EC0921 /* JKWKWebViewHandler */ = {
+		07C2B49B23F95043C8C138F43AD394ED /* JKWKWebViewHandler */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0261D29B3B5D7FFB8C6F0B02A8C5A0AD /* Build configuration list for PBXNativeTarget "JKWKWebViewHandler" */;
+			buildConfigurationList = 7EFEE24624D5AC0A42D65C7D5E81245F /* Build configuration list for PBXNativeTarget "JKWKWebViewHandler" */;
 			buildPhases = (
-				47A7D5D18876BA17C1618861C1D94406 /* Sources */,
-				8E65C3119DAC0EA318FFF2609B0AE840 /* Frameworks */,
-				777C0BE7C50172B2E11CBA5875680D7D /* Headers */,
-				0E48540423F73BB5A67A6F9EBDA3AD97 /* Resources */,
+				FE9DD7077296828CBD66F2494C4BA970 /* Headers */,
+				5FF7CF6DAC54AE9C7D6ED7236DBC9214 /* Sources */,
+				225C38885289961E487FF00F775D0DEC /* Frameworks */,
+				6BAF637F3AB029A4615EA4966F8D8E1A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6C5E944D0FE020ECE1621E9F72441BE8 /* PBXTargetDependency */,
 			);
 			name = JKWKWebViewHandler;
 			productName = JKWKWebViewHandler;
-			productReference = BFB831C362493441D7FD14813C123407 /* JKWKWebViewHandler.framework */;
+			productReference = 9A130AD5F39A7EB52F6BAE2D5F2ED54B /* JKWKWebViewHandler.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AE2076A33E83CCCE75448A2777D7EFA0 /* Pods-JKWKWebViewHandler_Tests */ = {
+		71A4A6F7EA0D9C43F2C7029CA9A6CAAF /* Pods-JKWKWebViewHandler_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B061DDFC37D0D823E380AE321ED9CEB5 /* Build configuration list for PBXNativeTarget "Pods-JKWKWebViewHandler_Tests" */;
+			buildConfigurationList = 210E938609845A3FEBD906040E7149AA /* Build configuration list for PBXNativeTarget "Pods-JKWKWebViewHandler_Tests" */;
 			buildPhases = (
-				A4584DD5CEB2B0D7F94A522A16494366 /* Sources */,
-				1375441116D90FD69A8D52EC30BFDFE3 /* Frameworks */,
-				2A1B2693AA5BE6B7E9E1A79FD159AB04 /* Headers */,
+				880CB471FBEA198AD078C11E1BD4880B /* Headers */,
+				7971F28E83C7CA8C934A85330C9E42C1 /* Sources */,
+				F18B258EE53008DE8AB2E6093C7397AF /* Frameworks */,
+				0EC131AA948AB14A0C4269C07D36B85C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AD533A0F609277CCB8AC27044F58DE9C /* PBXTargetDependency */,
+				4E801DFB625020B16AB89C5BA9E54303 /* PBXTargetDependency */,
 			);
 			name = "Pods-JKWKWebViewHandler_Tests";
 			productName = "Pods-JKWKWebViewHandler_Tests";
-			productReference = 3064986C744FDDB32E428351EF8B1619 /* Pods_JKWKWebViewHandler_Tests.framework */;
+			productReference = 5E4F27F43625F5C6498AE4B504598A08 /* Pods_JKWKWebViewHandler_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D2DA537E3F5F7C965EA010586310E74A /* Pods-JKWKWebViewHandler_Example */ = {
+		C39ADDDA7893545387B1E244A18FCDE7 /* JKDataHelper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9988DE91FC380A7F809B2219F59B2FB9 /* Build configuration list for PBXNativeTarget "Pods-JKWKWebViewHandler_Example" */;
+			buildConfigurationList = 264D9923AF16156CEA96F2043CEAF731 /* Build configuration list for PBXNativeTarget "JKDataHelper" */;
 			buildPhases = (
-				8F4F372E75E9A7FD61EBA281EE1FE022 /* Sources */,
-				ECBE7C046A5AC8D2ABA8E06D37428EAD /* Frameworks */,
-				7EC317905A894F80019629BFDEDB0FA4 /* Headers */,
+				4956A7627BABA303A743A6624D03C924 /* Headers */,
+				697B7E1457145A4E73B361CBCB63D38C /* Sources */,
+				D55FCFD26D107BEEE4D03B2CCED299EC /* Frameworks */,
+				2C07EBEF999075B4D5EE02B0EB7A6715 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				56AC371992F6DEA64989692BFC1FA37C /* PBXTargetDependency */,
+			);
+			name = JKDataHelper;
+			productName = JKDataHelper;
+			productReference = F6C0EF9E5C75364F45A5CABFD3AC4116 /* JKDataHelper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F9F9DFA2308725B439D9A54775DE540D /* Pods-JKWKWebViewHandler_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E85BECA351A3CE84EDE1B3595F1A189 /* Build configuration list for PBXNativeTarget "Pods-JKWKWebViewHandler_Example" */;
+			buildPhases = (
+				BB5A55C77377DF0D5352BEA89A51E719 /* Headers */,
+				D4A03D735F041A756F2344D5E277F711 /* Sources */,
+				C805D0F80E460DD0949C79D25C804C45 /* Frameworks */,
+				2B982A0497CCEDE093F9E0D64F62C28E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FE686DB0624BB515463C10620C0DA49 /* PBXTargetDependency */,
+				02B0473568D20DEB41E05EA8C8C6EAD4 /* PBXTargetDependency */,
 			);
 			name = "Pods-JKWKWebViewHandler_Example";
 			productName = "Pods-JKWKWebViewHandler_Example";
-			productReference = A222C41D6AC8521133BBA51C05892301 /* Pods_JKWKWebViewHandler_Example.framework */;
+			productReference = 170A6EE0BC11AD2EB71294556B526310 /* Pods_JKWKWebViewHandler_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 35881C87AB282355B92140ADD067DE78 /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 90F94E90B52F3DD0AF903B39203EDAEF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7FBEC20F7668DE2E6B72C10806EC0921 /* JKWKWebViewHandler */,
-				D2DA537E3F5F7C965EA010586310E74A /* Pods-JKWKWebViewHandler_Example */,
-				AE2076A33E83CCCE75448A2777D7EFA0 /* Pods-JKWKWebViewHandler_Tests */,
+				C39ADDDA7893545387B1E244A18FCDE7 /* JKDataHelper */,
+				07C2B49B23F95043C8C138F43AD394ED /* JKWKWebViewHandler */,
+				F9F9DFA2308725B439D9A54775DE540D /* Pods-JKWKWebViewHandler_Example */,
+				71A4A6F7EA0D9C43F2C7029CA9A6CAAF /* Pods-JKWKWebViewHandler_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0E48540423F73BB5A67A6F9EBDA3AD97 /* Resources */ = {
+		0EC131AA948AB14A0C4269C07D36B85C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AAE8BCAC121E182C8915A98247614B8 /* JKEventHandler.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B982A0497CCEDE093F9E0D64F62C28E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C07EBEF999075B4D5EE02B0EB7A6715 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BAF637F3AB029A4615EA4966F8D8E1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC5795EAC59AB2EEFBA513D7946210D /* JKEventHandler.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		47A7D5D18876BA17C1618861C1D94406 /* Sources */ = {
+		5FF7CF6DAC54AE9C7D6ED7236DBC9214 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C93417161AE8842082528CF942280103 /* JKEventHandler.m in Sources */,
-				FFC41BB34FAEAF5060334D0179EE86FA /* JKWKWebViewHandler-dummy.m in Sources */,
+				CFFD800C040497BB010B06ECB2B717D5 /* JKEventHandler.m in Sources */,
+				B0FEE0401FE6BBD4B274930BB30E27FF /* JKWKWebViewHandler-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8F4F372E75E9A7FD61EBA281EE1FE022 /* Sources */ = {
+		697B7E1457145A4E73B361CBCB63D38C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E11BE301CB2E19671F0D035870768D8 /* Pods-JKWKWebViewHandler_Example-dummy.m in Sources */,
+				8C5391FB4D234F8CAFE3E59C0A520DD2 /* JKDataHelper-dummy.m in Sources */,
+				0881EDF00878A56FA7626A4546E5CC2B /* NSArray+JKDataHelper.m in Sources */,
+				C25B7A35BEF96C080DBDBF68FFBD3CA9 /* NSDictionary+JKDataHelper.m in Sources */,
+				92FDB78D2FA92772DB146308C75F7168 /* NSString+JKDataHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A4584DD5CEB2B0D7F94A522A16494366 /* Sources */ = {
+		7971F28E83C7CA8C934A85330C9E42C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADFBA27D486D80D320303D2B49908D42 /* Pods-JKWKWebViewHandler_Tests-dummy.m in Sources */,
+				D5F294B1F846B6A1E8F74627F35FC993 /* Pods-JKWKWebViewHandler_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4A03D735F041A756F2344D5E277F711 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF00EF7F6CD176A69DE9CFC3CB4B0CD7 /* Pods-JKWKWebViewHandler_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		56AC371992F6DEA64989692BFC1FA37C /* PBXTargetDependency */ = {
+		02B0473568D20DEB41E05EA8C8C6EAD4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JKWKWebViewHandler;
-			target = 7FBEC20F7668DE2E6B72C10806EC0921 /* JKWKWebViewHandler */;
-			targetProxy = 819383FD56A0C0ED7550FC04FF3AAC81 /* PBXContainerItemProxy */;
+			target = 07C2B49B23F95043C8C138F43AD394ED /* JKWKWebViewHandler */;
+			targetProxy = 25EA58D3D6A97CBDD8A8114A073D7552 /* PBXContainerItemProxy */;
 		};
-		AD533A0F609277CCB8AC27044F58DE9C /* PBXTargetDependency */ = {
+		1FE686DB0624BB515463C10620C0DA49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JKDataHelper;
+			target = C39ADDDA7893545387B1E244A18FCDE7 /* JKDataHelper */;
+			targetProxy = 0909DF0180620D7DAD380A92010C0031 /* PBXContainerItemProxy */;
+		};
+		4E801DFB625020B16AB89C5BA9E54303 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-JKWKWebViewHandler_Example";
-			target = D2DA537E3F5F7C965EA010586310E74A /* Pods-JKWKWebViewHandler_Example */;
-			targetProxy = 9EE9F5E1E32EEAE6B1139D9AAB3FC0D1 /* PBXContainerItemProxy */;
+			target = F9F9DFA2308725B439D9A54775DE540D /* Pods-JKWKWebViewHandler_Example */;
+			targetProxy = 8D8C9B15F7F9B4F6366B9774308E4CE9 /* PBXContainerItemProxy */;
+		};
+		6C5E944D0FE020ECE1621E9F72441BE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JKDataHelper;
+			target = C39ADDDA7893545387B1E244A18FCDE7 /* JKDataHelper */;
+			targetProxy = AF5B3767D85A21AAD56D5D1BAAE4C3D3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		475D7BCAF915D482253B5A6CE609D840 /* Release */ = {
+		3306695AF783094A1716F45AB3A256B4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65548A3F04C3999665D85AF03050E81A /* Pods-JKWKWebViewHandler_Tests.release.xcconfig */;
+			baseConfigurationReference = 661D8EA9DC2F9CBC53209DEDE44E9DD3 /* JKDataHelper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JKDataHelper/JKDataHelper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JKDataHelper/JKDataHelper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JKDataHelper/JKDataHelper.modulemap";
+				PRODUCT_MODULE_NAME = JKDataHelper;
+				PRODUCT_NAME = JKDataHelper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4D7B3BF00CB335A7A15170BBEDA53843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5843909429E5E274A00DCDD35AC28591 /* Pods-JKWKWebViewHandler_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -427,7 +621,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JKWKWebViewHandler_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-JKWKWebViewHandler_Tests/Pods-JKWKWebViewHandler_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -441,45 +635,14 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A546F859736EFA114346B3A5A1BAF058 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A00AD1CD0BF3064770945CDCD35909A8 /* JKWKWebViewHandler.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JKWKWebViewHandler/JKWKWebViewHandler-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JKWKWebViewHandler/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JKWKWebViewHandler/JKWKWebViewHandler.modulemap";
-				PRODUCT_MODULE_NAME = JKWKWebViewHandler;
-				PRODUCT_NAME = JKWKWebViewHandler;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		B6FDBBF6BEC3E8C135127A3CCE810E40 /* Release */ = {
+		5C7E78F0058CE2F98E537D671C4593EA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B71FDAC724DE841B8B60E50CC51E3C29 /* Pods-JKWKWebViewHandler_Example.release.xcconfig */;
+			baseConfigurationReference = 0BD942E5BA9105C023B3CF73FC37E634 /* Pods-JKWKWebViewHandler_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -491,41 +654,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JKWKWebViewHandler_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-JKWKWebViewHandler_Example/Pods-JKWKWebViewHandler_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B7B02337E72506D736116E5189DB4B4C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2F635358343E938A8CAD13F32805C62 /* Pods-JKWKWebViewHandler_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JKWKWebViewHandler_Example/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-JKWKWebViewHandler_Example/Pods-JKWKWebViewHandler_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -544,7 +673,7 @@
 			};
 			name = Debug;
 		};
-		C7BE62186E17127FF3B5B27A193214BD /* Debug */ = {
+		60A7F9B4A8E92A5B16CC2AA887D9FE07 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -576,8 +705,131 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		646F43DE205244C3F47500D8FC7A93A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CF43F9E694C7785584675135BE56DBD /* JKWKWebViewHandler.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JKWKWebViewHandler/JKWKWebViewHandler-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JKWKWebViewHandler/JKWKWebViewHandler-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JKWKWebViewHandler/JKWKWebViewHandler.modulemap";
+				PRODUCT_MODULE_NAME = JKWKWebViewHandler;
+				PRODUCT_NAME = JKWKWebViewHandler;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		71CD3592B375BE9B0CC4199DF3008731 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 220FC469BE0FF1BB1DE588E1F88C566D /* Pods-JKWKWebViewHandler_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JKWKWebViewHandler_Tests/Pods-JKWKWebViewHandler_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JKWKWebViewHandler_Tests/Pods-JKWKWebViewHandler_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7E1F3D358966F24610AD782F313B4C40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -598,76 +850,21 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		D077E5AF30E3A09910AC48CA760A1280 /* Release */ = {
+		83EA36C063429FF78E6FEDF37382563B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		D93D2AED2289E2BE573E9954180D86DB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A00AD1CD0BF3064770945CDCD35909A8 /* JKWKWebViewHandler.xcconfig */;
+			baseConfigurationReference = 9CF43F9E694C7785584675135BE56DBD /* JKWKWebViewHandler.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -679,7 +876,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/JKWKWebViewHandler/JKWKWebViewHandler-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JKWKWebViewHandler/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/JKWKWebViewHandler/JKWKWebViewHandler-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -690,15 +887,14 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		DC3EB6F2D08D780968046EF1DE143370 /* Debug */ = {
+		D8C6A3573BFA0D39E383C1FF0D1DBF09 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20676298361928FD70EB361F55EE88D1 /* Pods-JKWKWebViewHandler_Tests.debug.xcconfig */;
+			baseConfigurationReference = C7501924B6D499D83418EB09C989926B /* Pods-JKWKWebViewHandler_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -710,12 +906,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JKWKWebViewHandler_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-JKWKWebViewHandler_Example/Pods-JKWKWebViewHandler_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-JKWKWebViewHandler_Tests/Pods-JKWKWebViewHandler_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-JKWKWebViewHandler_Example/Pods-JKWKWebViewHandler_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -723,6 +919,37 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DCF0281C1BEC71D250388E3D1A00CEB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 661D8EA9DC2F9CBC53209DEDE44E9DD3 /* JKDataHelper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JKDataHelper/JKDataHelper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JKDataHelper/JKDataHelper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JKDataHelper/JKDataHelper.modulemap";
+				PRODUCT_MODULE_NAME = JKDataHelper;
+				PRODUCT_NAME = JKDataHelper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -732,43 +959,52 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0261D29B3B5D7FFB8C6F0B02A8C5A0AD /* Build configuration list for PBXNativeTarget "JKWKWebViewHandler" */ = {
+		210E938609845A3FEBD906040E7149AA /* Build configuration list for PBXNativeTarget "Pods-JKWKWebViewHandler_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A546F859736EFA114346B3A5A1BAF058 /* Debug */,
-				D93D2AED2289E2BE573E9954180D86DB /* Release */,
+				4D7B3BF00CB335A7A15170BBEDA53843 /* Debug */,
+				71CD3592B375BE9B0CC4199DF3008731 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		264D9923AF16156CEA96F2043CEAF731 /* Build configuration list for PBXNativeTarget "JKDataHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C7BE62186E17127FF3B5B27A193214BD /* Debug */,
-				D077E5AF30E3A09910AC48CA760A1280 /* Release */,
+				DCF0281C1BEC71D250388E3D1A00CEB8 /* Debug */,
+				3306695AF783094A1716F45AB3A256B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9988DE91FC380A7F809B2219F59B2FB9 /* Build configuration list for PBXNativeTarget "Pods-JKWKWebViewHandler_Example" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7B02337E72506D736116E5189DB4B4C /* Debug */,
-				B6FDBBF6BEC3E8C135127A3CCE810E40 /* Release */,
+				7E1F3D358966F24610AD782F313B4C40 /* Debug */,
+				60A7F9B4A8E92A5B16CC2AA887D9FE07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B061DDFC37D0D823E380AE321ED9CEB5 /* Build configuration list for PBXNativeTarget "Pods-JKWKWebViewHandler_Tests" */ = {
+		7EFEE24624D5AC0A42D65C7D5E81245F /* Build configuration list for PBXNativeTarget "JKWKWebViewHandler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DC3EB6F2D08D780968046EF1DE143370 /* Debug */,
-				475D7BCAF915D482253B5A6CE609D840 /* Release */,
+				83EA36C063429FF78E6FEDF37382563B /* Debug */,
+				646F43DE205244C3F47500D8FC7A93A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E85BECA351A3CE84EDE1B3595F1A189 /* Build configuration list for PBXNativeTarget "Pods-JKWKWebViewHandler_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7E78F0058CE2F98E537D671C4593EA /* Debug */,
+				D8C6A3573BFA0D39E383C1FF0D1DBF09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

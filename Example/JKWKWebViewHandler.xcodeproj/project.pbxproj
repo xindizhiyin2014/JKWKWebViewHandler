@@ -336,16 +336,18 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JKWKWebViewHandler_Example/Pods-JKWKWebViewHandler_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-JKWKWebViewHandler_Example/Pods-JKWKWebViewHandler_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JKDataHelper/JKDataHelper.framework",
 				"${BUILT_PRODUCTS_DIR}/JKWKWebViewHandler/JKWKWebViewHandler.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JKDataHelper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JKWKWebViewHandler.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JKWKWebViewHandler_Example/Pods-JKWKWebViewHandler_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JKWKWebViewHandler_Example/Pods-JKWKWebViewHandler_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A5822FEE7FB1F0B6192C7805 /* [CP] Check Pods Manifest.lock */ = {
