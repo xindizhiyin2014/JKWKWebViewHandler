@@ -1,0 +1,23 @@
+PODS:
+  - JKDataHelper (0.1.23)
+  - JKWKWebViewHandler (0.4.2):
+    - JKDataHelper
+
+DEPENDENCIES:
+  - JKWKWebViewHandler (from `../../`)
+
+SPEC REPOS:
+  trunk:
+    - JKDataHelper
+
+EXTERNAL SOURCES:
+  JKWKWebViewHandler:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  JKDataHelper: b30fcfa50b345140ad55f3868e3b5a9e9e39283c
+  JKWKWebViewHandler: 714ccdaf74b38194666b0327045a0143df0a6346
+
+PODFILE CHECKSUM: 7b27156e204657151209960fc2b9e815a90d5bc9
+
+COCOAPODS: 1.10.0

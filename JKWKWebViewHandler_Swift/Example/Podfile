@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'JKWKWebViewHandler_Swift_Example' do
+  pod 'JKWKWebViewHandler_Swift', :path => '../../'
+
+  target 'JKWKWebViewHandler_Swift_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

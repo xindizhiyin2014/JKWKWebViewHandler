@@ -31,8 +31,8 @@ TODO: This is a tool of WKWebivew interact with H5, it add a callback event of e
   s.ios.deployment_target = '8.0'
 
 
- s.source_files = 'JKWKWebViewHandler/Classes/**/*.{h,m}'
- s.resources = 'JKWKWebViewHandler/Resources/*.js'
+ s.source_files = 'JKWKWebViewHandler_OC/JKWKWebViewHandler/Classes/**/*.{h,m}'
+ s.resources = 'JKWKWebViewHandler_OC/JKWKWebViewHandler/Resources/*.js'
   # s.resource_bundles = {
   #   'JKWKWebViewHandler' => ['JKWKWebViewHandler/Assets/*.png']
   # }

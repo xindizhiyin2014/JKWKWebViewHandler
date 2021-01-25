@@ -1,0 +1,6 @@
+framework module JKWKWebViewHandler_Swift {
+  umbrella header "JKWKWebViewHandler_Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
