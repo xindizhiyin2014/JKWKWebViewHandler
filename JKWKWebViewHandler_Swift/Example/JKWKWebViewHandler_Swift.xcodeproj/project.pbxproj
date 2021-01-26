@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -16,6 +15,10 @@
 		BDD6165025BBF6DA009C74BF /* JKWKWebViewHandler_Swift.podspec in Resources */ = {isa = PBXBuildFile; fileRef = BDD6164D25BBF6DA009C74BF /* JKWKWebViewHandler_Swift.podspec */; };
 		BDD6165125BBF6DA009C74BF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BDD6164E25BBF6DA009C74BF /* LICENSE */; };
 		BDD6165225BBF6DA009C74BF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BDD6164F25BBF6DA009C74BF /* README.md */; };
+		BDD6172625BEE334009C74BF /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = BDD6172425BEE334009C74BF /* test.html */; };
+		BDD6172725BEE334009C74BF /* vconsole.min.js in Resources */ = {isa = PBXBuildFile; fileRef = BDD6172525BEE334009C74BF /* vconsole.min.js */; };
+		BDD6172B25BEE3B7009C74BF /* JKWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6172A25BEE3B7009C74BF /* JKWKWebViewController.swift */; };
+		BDD6173925BFD35F009C74BF /* JKPluginA.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6173825BFD35F009C74BF /* JKPluginA.swift */; };
 		C8871135A8E89B8D0D674189 /* Pods_JKWKWebViewHandler_Swift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36C04D1158AA8916DBFBEF6 /* Pods_JKWKWebViewHandler_Swift_Example.framework */; };
 		D6D5CDA6BDC8D913870DFD95 /* Pods_JKWKWebViewHandler_Swift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186FCE8320A5D57A5676773 /* Pods_JKWKWebViewHandler_Swift_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -34,7 +37,6 @@
 		607FACD01AFB9204008FA782 /* JKWKWebViewHandler_Swift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKWKWebViewHandler_Swift_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -48,6 +50,10 @@
 		BDD6164D25BBF6DA009C74BF /* JKWKWebViewHandler_Swift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = JKWKWebViewHandler_Swift.podspec; path = ../../JKWKWebViewHandler_Swift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BDD6164E25BBF6DA009C74BF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
 		BDD6164F25BBF6DA009C74BF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		BDD6172425BEE334009C74BF /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		BDD6172525BEE334009C74BF /* vconsole.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = vconsole.min.js; sourceTree = "<group>"; };
+		BDD6172A25BEE3B7009C74BF /* JKWKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKWKWebViewController.swift; sourceTree = "<group>"; };
+		BDD6173825BFD35F009C74BF /* JKPluginA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKPluginA.swift; sourceTree = "<group>"; };
 		DB282E76F9453FDC22D55299 /* Pods-JKWKWebViewHandler_Swift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKWKWebViewHandler_Swift_Example.debug.xcconfig"; path = "Target Support Files/Pods-JKWKWebViewHandler_Swift_Example/Pods-JKWKWebViewHandler_Swift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F186FCE8320A5D57A5676773 /* Pods_JKWKWebViewHandler_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKWKWebViewHandler_Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,7 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				BDD6172A25BEE3B7009C74BF /* JKWKWebViewController.swift */,
+				BDD6173825BFD35F009C74BF /* JKPluginA.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -120,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				607FACD41AFB9204008FA782 /* Info.plist */,
+				BDD6172425BEE334009C74BF /* test.html */,
+				BDD6172525BEE334009C74BF /* vconsole.min.js */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -249,10 +258,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD6172625BEE334009C74BF /* test.html in Resources */,
 				BDD6165225BBF6DA009C74BF /* README.md in Resources */,
 				BDD6165025BBF6DA009C74BF /* JKWKWebViewHandler_Swift.podspec in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				BDD6172725BEE334009C74BF /* vconsole.min.js in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				BDD6165125BBF6DA009C74BF /* LICENSE in Resources */,
 			);
@@ -337,8 +348,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				BDD6172B25BEE3B7009C74BF /* JKWKWebViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				BDD6173925BFD35F009C74BF /* JKPluginA.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

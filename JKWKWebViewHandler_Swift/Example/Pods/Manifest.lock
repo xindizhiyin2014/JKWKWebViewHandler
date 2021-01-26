@@ -1,5 +1,5 @@
 PODS:
-  - JKWKWebViewHandler_Swift (0.1.0)
+  - JKWKWebViewHandler_Swift (0.4.4)
 
 DEPENDENCIES:
   - JKWKWebViewHandler_Swift (from `../../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  JKWKWebViewHandler_Swift: b352faed9f34f6fb5dd2d883d57e050b5403c704
+  JKWKWebViewHandler_Swift: fe4136bf97d0a1e941081b66be6e3a437526afe5
 
 PODFILE CHECKSUM: b105c39d6ed3e5ffa70b3d27f732b3976a02a857
 

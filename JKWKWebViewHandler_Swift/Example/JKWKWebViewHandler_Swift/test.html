@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>iOS and Js</title>
+        <style type="text/css">
+            body,
+            html {
+                height: 500px;
+                line-height: 1;
+                font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial,
+                sans-serif, 'Droid Sans Fallback';
+                -webkit-text-size-adjust: 100% !important;
+                -webkit-tap-highlight-color: transparent;
+            }
+        #__vconsole .vc-switch{
+            top:0;
+        }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+        
+        <script src="./vconsole.min.js"></script>
+        <script>
+            new VConsole();
+            </script>
+        <script>
+            </script>
+    </head>
+    
+    <body>
+        
+        <div style="margin-top: 100px">
+            <h1 style="color: red;">教你如何用H5与OC进行交互,并且把H5输入的内容显示到当前的控制器上</h1><br/>
+            <div><input type="button"  value="getInfoFromNative" onclick="getInfoFromNative()"></div>
+            <br/>
+            
+            <div><input type="button" value="cleanAllCallBacks" onclick="cleanAllCallBacks()"></div>
+            <br/>
+            <div><input type="button" value="点击触发JS方法(callJsConfirm)" onclick="callJsConfirm()"></div><br/>
+        </div>
+        <br/>
+        <div>
+            <div><input type="button" value="点击触发JS输入方法(callJsInput) " onclick="callJsInput()"></div><br/>
+        </div>
+        <script type="text/javascript">
+            
+        function getInfoFromNative(){
+            var params = {'name':'我是jack！！！'};
+            JKEventHandler.exec('JKPluginA','getNativeInfo',params,function(data){
+                                console.log('succedss block');
+                                alert(data);
+                                },
+                                function(data){
+                                console.log('fail block');
+                                alert(data);
+                                });
+        }
+        
+        function callJsConfirm() {
+            if (confirm('confirm', 'Objective-C call js to show confirm')) {
+                document.getElementById('jsParamFuncSpan').innerHTML
+                = 'true';
+            } else {
+                document.getElementById('jsParamFuncSpan').innerHTML
+                = 'false';
+            }
+            
+        }
+        
+        function callJsInput() {
+            var response = prompt('Hello', '请输入你的名字:');
+            document.getElementById('jsParamFuncSpan').innerHTML = response;
+            alert (response);
+            
+        }
+        
+        function cleanAllCallBacks(){
+            JKEventHandler.removeAllCallBacks();
+        }
+        
+            </script>
+    </body>
+</html>
+

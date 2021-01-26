@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+        let url:String = String.init(format: "file://%@", Bundle.main.path(forResource: "test", ofType: "html")!)
+        let vc = JKWKWebViewController.init()
+        vc.url = url
+        let naVC:UINavigationController = UINavigationController.init(rootViewController: vc)
+        self.window?.rootViewController = naVC
         return true
     }
 
