@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 This is a tool of WKWebivew interact with H5,it wirte with swift. it add a callback event of every JS funtion if needed. and when the ViewController will be destroyed all the callback events can be cleaned. it is different to the way create a new iframe and catch the url to interact with H5.
                        DESC
 
-  s.homepage         = 'https://github.com/xindizhiyin2014/JKWKWebViewHandler_Swift'
+  s.homepage         = 'https://github.com/xindizhiyin2014/JKWKWebViewHandler'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'xindizhiyin2014' => '929097264@qq.com' }
-  s.source           = { :git => 'https://github.com/xindizhiyin2014/JKWKWebViewHandler_Swift.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/xindizhiyin2014/JKWKWebViewHandler.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
