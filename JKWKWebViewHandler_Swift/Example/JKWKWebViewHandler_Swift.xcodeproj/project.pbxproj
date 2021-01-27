@@ -19,6 +19,7 @@
 		BDD6172725BEE334009C74BF /* vconsole.min.js in Resources */ = {isa = PBXBuildFile; fileRef = BDD6172525BEE334009C74BF /* vconsole.min.js */; };
 		BDD6172B25BEE3B7009C74BF /* JKWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6172A25BEE3B7009C74BF /* JKWKWebViewController.swift */; };
 		BDD6173925BFD35F009C74BF /* JKPluginA.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6173825BFD35F009C74BF /* JKPluginA.swift */; };
+		BDD6176F25C16955009C74BF /* JKEventHandleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6176E25C16954009C74BF /* JKEventHandleDelegate.swift */; };
 		C8871135A8E89B8D0D674189 /* Pods_JKWKWebViewHandler_Swift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36C04D1158AA8916DBFBEF6 /* Pods_JKWKWebViewHandler_Swift_Example.framework */; };
 		D6D5CDA6BDC8D913870DFD95 /* Pods_JKWKWebViewHandler_Swift_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186FCE8320A5D57A5676773 /* Pods_JKWKWebViewHandler_Swift_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		BDD6172525BEE334009C74BF /* vconsole.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = vconsole.min.js; sourceTree = "<group>"; };
 		BDD6172A25BEE3B7009C74BF /* JKWKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKWKWebViewController.swift; sourceTree = "<group>"; };
 		BDD6173825BFD35F009C74BF /* JKPluginA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKPluginA.swift; sourceTree = "<group>"; };
+		BDD6176E25C16954009C74BF /* JKEventHandleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKEventHandleDelegate.swift; sourceTree = "<group>"; };
 		DB282E76F9453FDC22D55299 /* Pods-JKWKWebViewHandler_Swift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKWKWebViewHandler_Swift_Example.debug.xcconfig"; path = "Target Support Files/Pods-JKWKWebViewHandler_Swift_Example/Pods-JKWKWebViewHandler_Swift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F186FCE8320A5D57A5676773 /* Pods_JKWKWebViewHandler_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKWKWebViewHandler_Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				BDD6172A25BEE3B7009C74BF /* JKWKWebViewController.swift */,
 				BDD6173825BFD35F009C74BF /* JKPluginA.swift */,
+				BDD6176E25C16954009C74BF /* JKEventHandleDelegate.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -348,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD6176F25C16955009C74BF /* JKEventHandleDelegate.swift in Sources */,
 				BDD6172B25BEE3B7009C74BF /* JKWKWebViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				BDD6173925BFD35F009C74BF /* JKPluginA.swift in Sources */,

@@ -8,10 +8,22 @@
 import Foundation
 import WebKit
 public let JKEventHandlerNameSwift = "JKEventHandler"
+
+public protocol JKEventHandlerProtocol:class,NSObjectProtocol {
+    func nativeHandle(plugin:String?, funcName:inout String!, params:Dictionary<String, Any>?, success:((_ response:Any?) -> Void)?, failure:((_ response:Any?) -> Void)?) -> Void
+    
+}
+
 open class JKEventHandlerSwift: NSObject,WKScriptMessageHandler {
     
  public weak var webView:WKWebView!
+    weak var delegate:JKEventHandlerProtocol?
     
+    public init(_ webView:WKWebView!,_ delegate:JKEventHandlerProtocol!) {
+        super.init()
+        self.webView = webView
+        self.delegate = delegate
+    }
   public class func handleJS() -> String? {
     let path:String = Bundle.init(for: self).path(forResource: "JKEventHandler", ofType: "js") ?? ""
     var jsString:String?
@@ -104,18 +116,9 @@ open class JKEventHandlerSwift: NSObject,WKScriptMessageHandler {
         }
     
    private func interactWithPlguin(plugin:String?, withFuncName funcName:inout String!, withParams params:Dictionary<String, Any>?, withSuccess success:((_ response:Any?) -> Void)?, withFailure failure:((_ response:Any?) -> Void)?) -> Void {
-     funcName = String.init(format: "%@:::", funcName)
-     let selector:Selector = Selector.init(funcName)
-    let className = JKEventPluginManager.sharedManager.className(withPluginName: plugin)
-    let realHandler:AnyClass? = NSClassFromString(className ?? "")
-    if ((realHandler?.responds(to: selector)) != nil) {
-       
-        let imp:IMP = realHandler!.method(for: selector)
-        typealias funcIMP = @convention(c) (AnyClass,Selector,Dictionary<String, Any>?,Any?,Any?) ->Void
-
-      let function = unsafeBitCast(imp, to: funcIMP.self)
-        function(realHandler!, selector, params, success, failure)
-
+    
+    if ((self.delegate?.responds(to:Selector("nativeHandle:::"))) != nil) {
+        self.delegate?.nativeHandle(plugin: plugin, funcName: &funcName, params: params, success: success, failure: failure)
     } else {
         if failure != nil {
             let error:String = "unSupported error!"

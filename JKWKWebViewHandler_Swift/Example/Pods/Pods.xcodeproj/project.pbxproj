@@ -16,7 +16,6 @@
 		7DC3449869195073327845A9E446B592 /* Pods-JKWKWebViewHandler_Swift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF64FF4E5CB4DD900EA60EC38EE20C7 /* Pods-JKWKWebViewHandler_Swift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CA3D43B0A03F9D3B26ACB24E5F9159D /* JKEventHandler.js in Resources */ = {isa = PBXBuildFile; fileRef = 3B534B8476EDB761CD10C0E5A5D6B9A5 /* JKEventHandler.js */; };
 		9E64A9E085908D0A2A4ED552C19944EC /* JKWKWebViewHandler_Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EBE31186363B0CD052E59C73CB853F8 /* JKWKWebViewHandler_Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDD6173D25BFD9F9009C74BF /* JKEventPluginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6173C25BFD9F9009C74BF /* JKEventPluginManager.swift */; };
 		D4CE9308E2C8650D3E279B17D40BC340 /* Pods-JKWKWebViewHandler_Swift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A06F47839620E35FA0D2726C29E0649C /* Pods-JKWKWebViewHandler_Swift_Tests-dummy.m */; };
 		E8EA6B25C93FE1F1465A3065111CC857 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -66,7 +65,6 @@
 		A52722A4069FC0A68EE3437E677E09FD /* JKWKWebViewHandler_Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JKWKWebViewHandler_Swift-prefix.pch"; sourceTree = "<group>"; };
 		B0A77582C2BDBFCA4E0E8B7BF540E523 /* JKWKWebViewHandler_Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JKWKWebViewHandler_Swift-dummy.m"; sourceTree = "<group>"; };
 		B220F107B8CA5D0E7270F4AFDA7D4432 /* JKEventHandlerSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JKEventHandlerSwift.swift; path = JKWKWebViewHandler_Swift/JKWKWebViewHandler_Swift/Classes/JKEventHandlerSwift.swift; sourceTree = "<group>"; };
-		BDD6173C25BFD9F9009C74BF /* JKEventPluginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JKEventPluginManager.swift; path = JKWKWebViewHandler_Swift/JKWKWebViewHandler_Swift/Classes/JKEventPluginManager.swift; sourceTree = "<group>"; };
 		C93958D007A12C1646BFC93314803232 /* Pods-JKWKWebViewHandler_Swift_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JKWKWebViewHandler_Swift_Example-Info.plist"; sourceTree = "<group>"; };
 		CA4435BE3B9D4E688277211AB131F44E /* JKWKWebViewHandler_Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JKWKWebViewHandler_Swift.modulemap; sourceTree = "<group>"; };
 		DFA5E806A063F46A018B6624C2760C54 /* JKWKWebViewHandler_Swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JKWKWebViewHandler_Swift-Info.plist"; sourceTree = "<group>"; };
@@ -174,7 +172,6 @@
 			children = (
 				3B534B8476EDB761CD10C0E5A5D6B9A5 /* JKEventHandler.js */,
 				B220F107B8CA5D0E7270F4AFDA7D4432 /* JKEventHandlerSwift.swift */,
-				BDD6173C25BFD9F9009C74BF /* JKEventPluginManager.swift */,
 				1601DEDF3AAD736CEFD54D489DFB6F2D /* Pod */,
 				2EFDBCF9E8CAA6296FFB95ADDEA59966 /* Support Files */,
 			);
@@ -388,7 +385,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDD6173D25BFD9F9009C74BF /* JKEventPluginManager.swift in Sources */,
 				52CCAE9B09E7F56DD3DF830B144FA6C3 /* JKEventHandlerSwift.swift in Sources */,
 				09E18AECDDD5CA45DB4CF0B59887894B /* JKWKWebViewHandler_Swift-dummy.m in Sources */,
 			);

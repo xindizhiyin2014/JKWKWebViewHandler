@@ -8,7 +8,8 @@
 
 import Foundation
 class JKPluginA: NSObject {
- class func getNativeInfo(params:Dictionary<String,Any>, successCallBack:((_ response:Any?) -> Void)?, failureCallBack:((_ response:Any?) -> Void)?) -> Void {
+     class func getNativeInfo(params:Dictionary<String,Any>, successCallBack:((_ response:Any?) -> Void)?, failureCallBack:((_ response:Any?) -> Void)?) -> Void {
+        print("params:%@",params)
         if successCallBack != nil {
             successCallBack!("success !")
         }
@@ -17,4 +18,10 @@ class JKPluginA: NSObject {
             failureCallBack!("failure !")
         }
     }
+    
+    
 }
+
+
+
+

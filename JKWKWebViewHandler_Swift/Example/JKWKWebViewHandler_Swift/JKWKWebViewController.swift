@@ -11,7 +11,9 @@ import UIKit
 import WebKit
 import JKWKWebViewHandler_Swift
 
-class JKWKWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
+class JKWKWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate,JKEventHandlerProtocol {
+    
+    
    public var url:String?
     var webView:WKWebView?
     var eventHandler:JKEventHandlerSwift!
@@ -19,12 +21,13 @@ class JKWKWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        JKEventPluginManager.sharedManager.registerPlugin(pluginName: "JKPluginA", withClass: JKPluginA.self)
+        
         self.configureWKWebView()
+        
     }
     
     func configureWKWebView() -> Void {
-        self.eventHandler = JKEventHandlerSwift.init()
+        self.eventHandler = JKEventHandlerSwift.init(webView, self)
         let config:WKWebViewConfiguration = WKWebViewConfiguration.init()
         config.preferences = WKPreferences.init()
         config.preferences.minimumFontSize = 10
@@ -52,4 +55,15 @@ class JKWKWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate 
         self.present(alert, animated: true, completion: nil)
     }
     
+    
+    //MARK:JKEventHandlerProtocol
+    func nativeHandle(plugin: String?, funcName: inout String!, params: Dictionary<String, Any>?, success: ((Any?) -> Void)?, failure: ((Any?) -> Void)?) {
+        if plugin == "JKPluginA" {
+            JKPluginA.getNativeInfo(params: params ?? [:], successCallBack: success, failureCallBack: failure)
+        }
+    }
+    
 }
+
+
+
