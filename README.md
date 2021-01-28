@@ -16,9 +16,19 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 JKWKWebViewHandler is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
+## Object-C
+
 ```ruby
 pod "JKWKWebViewHandler"
 ```
+
+## Swift
+```ruby
+pod "JKWKWebViewHandler_Swift"
+
+```
+## article
+![](https://xindizhiyin2014.blog.csdn.net/article/details/69102820)
 
 ## Author
 
@@ -115,6 +125,55 @@ failureCallBack(@"failure !!!");
 }
 }
 @end
+```
+### swift guide
+```
+//step 1
+func configureWKWebView() -> Void {
+    self.eventHandler = JKEventHandlerSwift.init(webView, self)
+    let config:WKWebViewConfiguration = WKWebViewConfiguration.init()
+    config.preferences = WKPreferences.init()
+    config.preferences.minimumFontSize = 10
+    config.preferences.javaScriptEnabled = true
+    config.preferences.javaScriptCanOpenWindowsAutomatically = true
+    config.processPool = WKProcessPool.init()
+    
+    let usrScript:WKUserScript = WKUserScript.init(source: JKEventHandlerSwift.handleJS()!, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+    config.userContentController = WKUserContentController.init()
+    config.userContentController.addUserScript(usrScript)
+    config.userContentController.add(self.eventHandler, name: JKEventHandlerNameSwift)
+    
+    self.webView = WKWebView.init(frame: self.view.bounds, configuration: config)
+    self.webView?.load(URLRequest.init(url: URL.init(string: self.url!)!))
+    self.view.addSubview(self.webView!)
+    self.eventHandler.webView = self.webView
+    self.webView?.uiDelegate = self;
+}
+
+//step2
+//MARK:JKEventHandlerProtocol
+func nativeHandle(plugin: String?, funcName: inout String!, params: Dictionary<String, Any>?, success: ((Any?) -> Void)?, failure: ((Any?) -> Void)?) {
+    if plugin == "JKPluginA" {
+        JKPluginA.getNativeInfo(params: params ?? [:], successCallBack: success, failureCallBack: failure)
+    }
+}
+
+//step3
+class JKPluginA: NSObject {
+     class func getNativeInfo(params:Dictionary<String,Any>, successCallBack:((_ response:Any?) -> Void)?, failureCallBack:((_ response:Any?) -> Void)?) -> Void {
+        print("params:%@",params)
+        if successCallBack != nil {
+            successCallBack!("success !")
+        }
+        
+        if failureCallBack != nil {
+            failureCallBack!("failure !")
+        }
+    }
+    
+    
+}
+
 ```
 
 

@@ -2,8 +2,9 @@ var JKEventHandler ={
 
 exec:function(plugin,funcName,params,successCallBack,failureCallBack){
     var message;
-    var successCallBackID = plugin + '_' + funcName + '_' + 'successCallBack';
-    var failureCallBackID = plugin + '_' + funcName + '_' + 'failureCallBack';
+    var timeStamp = new Date().getTime();
+    var successCallBackID = plugin + '_' + funcName + '_' + timeStamp + '_' + 'successCallBack';
+    var failureCallBackID = plugin + '_' + funcName + '_' + timeStamp + '_' + 'failureCallBack';
     if (successCallBack){
         if(!JKBridgeEvent._listeners[successCallBackID]){
             JKBridgeEvent.addEvent(successCallBackID, function(data){
@@ -42,7 +43,7 @@ exec:function(plugin,funcName,params,successCallBack,failureCallBack){
 callBack:function(callBackID,data){
     
     JKBridgeEvent.fireEvent(callBackID,data);
-    
+    JKBridgeEvent.removeEvent(callBackID);
 },
     
 removeAllCallBacks:function(data){
@@ -53,51 +54,29 @@ removeAllCallBacks:function(data){
 
 
 
+
 var JKBridgeEvent = {
     
 _listeners: {},
     
-    
-addEvent: function(type, fn) {
-    if (typeof this._listeners[type] === "undefined") {
-        this._listeners[type] = [];
-    }
-    if (typeof fn === "function") {
-        this._listeners[type].push(fn);
-    }
-    
+addEvent: function(callBackID, fn) {
+    this._listeners[callBackID] = fn;
     return this;
 },
     
     
-fireEvent: function(type,param) {
-    var arrayEvent = this._listeners[type];
-    if (arrayEvent instanceof Array) {
-        for (var i=0, length=arrayEvent.length; i<length; i+=1) {
-            if (typeof arrayEvent[i] === "function") {
-                arrayEvent[i](param);
-            }
-        }
+fireEvent: function(callBackID,param) {
+    var fn = this._listeners[callBackID];
+    if (typeof callBackID === "string" && typeof fn === "function") {
+        fn(param);
+    } else {
+       delete this._listeners[callBackID];
     }
-    
     return this;
 },
     
-removeEvent: function(type, fn) {
-    var arrayEvent = this._listeners[type];
-    if (typeof type === "string" && arrayEvent instanceof Array) {
-        if (typeof fn === "function") {
-            for (var i=0, length=arrayEvent.length; i<length; i+=1){
-                if (arrayEvent[i] === fn){
-                    this._listeners[type].splice(i, 1);
-                    break;
-                }
-            }
-        } else {
-            delete this._listeners[type];
-        }
-    }
-    
+removeEvent: function(callBackID) {
+   delete this._listeners[callBackID];
     return this;
 }
 };

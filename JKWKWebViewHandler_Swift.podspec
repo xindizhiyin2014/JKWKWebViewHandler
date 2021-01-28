@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JKWKWebViewHandler_Swift'
-  s.version          = '0.4.4'
+  s.version          = '0.4.5'
   s.summary          = 'This is a tool of WKWebivew interact with H5,it write with swift.'
 
 # This description is used to generate tags and improve search results.

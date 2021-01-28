@@ -82,7 +82,8 @@
 
 - (void)_jkCallJSCallBackWithCallBackName:(NSString *)callBackName response:(id)response{
     WKWebView *weakWebView = _webView;
-    if ([response isKindOfClass:[NSDictionary class]] || [response isKindOfClass:[NSMutableDictionary class]] || [response isKindOfClass:[NSArray class]]) {
+    if ([response isKindOfClass:[NSDictionary class]]
+        || [response isKindOfClass:[NSArray class]]) {
         NSData *data=[NSJSONSerialization dataWithJSONObject:response options:NSJSONWritingPrettyPrinted error:nil];
         
         NSString *jsonStr=[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
