@@ -46,7 +46,6 @@ open class JKEventHandlerSwift: NSObject,WKScriptMessageHandler {
         handler.webView.evaluateJavaScript("JKEventHandler.removeAllCallBacks();", completionHandler: nil)
         handler.webView.configuration.userContentController.removeScriptMessageHandler(forName: JKEventHandlerNameSwift)
     }
-        #warning("todo")
     handler = nil
     }
 

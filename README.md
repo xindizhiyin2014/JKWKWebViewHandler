@@ -175,7 +175,8 @@ class JKPluginA: NSObject {
 }
 
 ```
-
+## 实现历程博客
+[《WKWebView与js交互之完美解决方案》](https://blog.csdn.net/hanhailong18/article/details/69102820?spm=1001.2014.3001.5502)
 
 ## License
 
