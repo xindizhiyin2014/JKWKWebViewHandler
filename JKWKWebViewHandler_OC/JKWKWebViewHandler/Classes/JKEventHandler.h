@@ -14,6 +14,8 @@ static NSString * const JKEventHandlerName = @"JKEventHandler";
 @interface JKEventHandler : NSObject<WKScriptMessageHandler>
 
 @property (nonatomic, weak) WKWebView *webView;
+/// 插件字典，key：插件的名字，value：插件的具体对象，ps：可以是实例对象，也可以是类对象
+@property (nonatomic, strong) NSDictionary <NSString*,id>*pluginsDic;
 
 + (NSString *)handlerJS;
 

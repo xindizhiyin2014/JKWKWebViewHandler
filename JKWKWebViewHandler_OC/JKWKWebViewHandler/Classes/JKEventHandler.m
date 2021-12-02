@@ -67,7 +67,13 @@
                    failure:(void(^)(id response))failureCallBack{
     funcName = [NSString stringWithFormat:@"%@:::",funcName];
     SEL selector =NSSelectorFromString(funcName);
-    Class realHandler = NSClassFromString(plugin);
+    NSObject *realHandler = nil;
+    if (!plugin) {
+        realHandler = self;
+    } else {
+        realHandler = self.pluginsDic[plugin];
+    }
+    
     if ([realHandler respondsToSelector:selector]) {
         IMP imp = [realHandler methodForSelector:selector];
         void (*func)(id, SEL, id, id, id) = (void *)imp;
