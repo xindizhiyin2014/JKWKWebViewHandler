@@ -36,6 +36,7 @@ class JKWKWebViewController: UIViewController,WKNavigationDelegate,WKUIDelegate,
         config.processPool = WKProcessPool.init()
         
         let usrScript:WKUserScript = WKUserScript.init(source: JKEventHandlerSwift.handleJS()!, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+//        let usrScript:WKUserScript = WKUserScript.init(source: JKEventHandlerSwift.handleJS()!, injectionTime: .atDocumentEnd, forMainFrameOnly: false)  //support mutli frame 
         config.userContentController = WKUserContentController.init()
         config.userContentController.addUserScript(usrScript)
         config.userContentController.add(self.eventHandler, name: JKEventHandlerNameSwift)

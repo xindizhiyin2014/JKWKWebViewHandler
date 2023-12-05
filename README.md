@@ -55,7 +55,7 @@ WKUserScript *usrScript = [[WKUserScript alloc] initWithSource:[JKEventHandler s
     // 注入JS对象名称AppModel，当JS通过AppModel来调用时，
     // 我们可以在WKScriptMessageHandler代理中接收到
     [config.userContentController addScriptMessageHandler:[JKEventHandler shareInstance] name:EventHandler];
-   
+       //WKUserScript *usrScript = [[WKUserScript alloc] initWithSource:[JKEventHandler handlerJS] injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:NO]; // support mutli frame
     
     
     
@@ -139,6 +139,8 @@ func configureWKWebView() -> Void {
     config.processPool = WKProcessPool.init()
     
     let usrScript:WKUserScript = WKUserScript.init(source: JKEventHandlerSwift.handleJS()!, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+    //        let usrScript:WKUserScript = WKUserScript.init(source: JKEventHandlerSwift.handleJS()!, injectionTime: .atDocumentEnd, forMainFrameOnly: false)  //support mutli frame 
+    
     config.userContentController = WKUserContentController.init()
     config.userContentController.addUserScript(usrScript)
     config.userContentController.add(self.eventHandler, name: JKEventHandlerNameSwift)

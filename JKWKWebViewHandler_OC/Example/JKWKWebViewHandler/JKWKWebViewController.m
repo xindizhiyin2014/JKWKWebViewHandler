@@ -68,6 +68,7 @@
     
     
     WKUserScript *usrScript = [[WKUserScript alloc] initWithSource:[JKEventHandler handlerJS] injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
+    //WKUserScript *usrScript = [[WKUserScript alloc] initWithSource:[JKEventHandler handlerJS] injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:NO]; // support mutli frame
     
     // 通过JS与webview内容交互
     config.userContentController = [[WKUserContentController alloc] init];
